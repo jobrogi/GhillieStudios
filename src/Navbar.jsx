@@ -41,10 +41,11 @@ const Navbar = () => {
           className="flex flex-col items-center justify-center group"
         >
           <img
-            src="/StudioLogo.png"
+            src={`${import.meta.env.BASE_URL}StudioLogo.png`}
             alt="Ghillie Studios Logo"
             className="w-10 h-10 object-contain mb-1 transition duration-300 group-hover:brightness-110"
           />
+
           <span className="text-xs -m-2 font-extrabold tracking-wide text-text-primary group-hover:text-accent-300 uppercase">
             Ghillie Studios
           </span>

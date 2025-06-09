@@ -23,7 +23,7 @@ const MarkdownPage = ({ slug: overrideSlug }) => {
     // Handle top-level Docs folder
     const folderName = folder === "Docs" ? "" : `${folder}/`;
 
-    const filePath = `/Docs/${folderName}${file}.md`;
+    const filePath = `${import.meta.env.BASE_URL}Docs/${folderName}${file}.md`;
 
     fetch(filePath)
       .then((res) => {

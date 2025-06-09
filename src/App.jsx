@@ -5,8 +5,7 @@ import About from "./MainSite/About";
 import Work from "./MainSite/Work";
 import Contact from "./MainSite/Contact";
 import Documentation from "./Docs/Docs";
-import MarkdownPage from "./Docs/MarkdownPage"; // <-- Add this
-
+import MarkdownPage from "./Docs/MarkdownPage";
 const App = () => {
   const location = useLocation();
   const isDocs = location.pathname.startsWith("/docs");

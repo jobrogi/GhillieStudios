@@ -5,7 +5,7 @@ const plugins = [
     title: "RTSCamPro",
     description:
       "A premium RTS-style camera system designed for top-down and strategy games. Smooth movement, zoom, tilt, edge-panning, and more — fully Blueprint-ready.",
-    imageUrl: "/ProjectShowcase/RTSCamPro.png",
+    imageUrl: `${import.meta.env.BASE_URL}ProjectShowcase/RTSCamPro.png`,
     link: "https://www.fab.com/listings/afc29d33-c336-47f9-bfe4-fbf6aa6b72a8",
     release: "06/05/25",
     engine: "5.3–5.6",
@@ -14,7 +14,7 @@ const plugins = [
     title: "AutoSnap – Runtime",
     description:
       "Runtime grid snapping, gizmo control, and actor alignment — perfect for level editors, puzzle games, and dev tools in runtime environments.",
-    imageUrl: "/ProjectShowcase/AutoSnapRuntime.png",
+    imageUrl: `${import.meta.env.BASE_URL}ProjectShowcase/AutoSnapRuntime.png`,
     link: "https://www.fab.com/listings/2b36aed5-8d4f-4cad-ac2d-d9b7169a278d",
     release: "05/23/25",
     engine: "5.3–5.6",
@@ -23,7 +23,9 @@ const plugins = [
     title: "Modular Interactions",
     description:
       "A powerful, modular interaction system for Unreal Engine. Build tooltips, context menus, toggles, and widget-driven logic with ease.",
-    imageUrl: "/ProjectShowcase/ModularInteractions.png",
+    imageUrl: `${
+      import.meta.env.BASE_URL
+    }ProjectShowcase/ModularInteractions.png`,
     link: "https://www.fab.com/listings/c584ff0d-33f2-4f93-925f-6f57b58c1194",
     release: "05/22/25",
     engine: "5.3–5.5",
