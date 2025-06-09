@@ -1,0 +1,127 @@
+const navSections = [
+  {
+    label: "Getting Started",
+    links: [
+      { title: "Overview", path: "/docs/md/Docs---Overview" },
+      { title: "Installation", path: "/docs/md/Docs---Installation" },
+      { title: "FAQ", path: "/docs/md/Docs---FAQ" },
+    ],
+  },
+  {
+    label: "Plugins",
+    plugins: [
+      {
+        name: "RTSCamPro",
+        links: [
+          {
+            title: "Overview",
+            path: "/docs/md/RTSCamPro---RTSCamPro---Overview",
+          },
+          {
+            title: "Changelog",
+            path: "/docs/md/RTSCamPro---RTSCamPro---Changelog",
+          },
+          {
+            title: "Documentation",
+            path: "/docs/md/RTSCamPro---RTSCamPro---Docs",
+          },
+        ],
+      },
+      {
+        name: "AutoSnap – Runtime",
+        links: [
+          {
+            title: "Overview",
+            path: "/docs/md/AutoSnapRuntime---AutoSnapRuntime---Overview",
+          },
+          {
+            title: "Changelog",
+            path: "/docs/md/AutoSnapRuntime---AutoSnapRuntime---Changelog",
+          },
+          {
+            title: "Documentation",
+            path: "/docs/md/AutoSnapRuntime---AutoSnapRuntime---Docs",
+          },
+        ],
+      },
+      {
+        name: "AutoSnap – Editor",
+        links: [
+          {
+            title: "Overview",
+            path: "/docs/md/AutoSnapEditor---AutoSnapEditor---Overview",
+          },
+          {
+            title: "Changelog",
+            path: "/docs/md/AutoSnapEditor---AutoSnapEditor---Changelog",
+          },
+          {
+            title: "Documentation",
+            path: "/docs/md/AutoSnapEditor---AutoSnapEditor---Docs",
+          },
+        ],
+      },
+
+      {
+        name: "GlideCam - Lite RTS Camera System",
+        links: [
+          {
+            title: "Overview",
+            path: "/docs/md/GlideCam---GlideCam---Overview",
+          },
+          {
+            title: "Changelog",
+            path: "/docs/md/GlideCam---GlideCam---Changelog",
+          },
+          {
+            title: "Documentation",
+            path: "/docs/md/GlideCam---GlideCam---Docs",
+          },
+        ],
+      },
+
+      {
+        name: "Modular Interactions",
+        links: [
+          {
+            title: "Overview",
+            path: "/docs/md/ModularInteractions---ModularInteractions---Overview",
+          },
+          {
+            title: "Changelog",
+            path: "/docs/md/ModularInteractions---ModularInteractions---Changelog",
+          },
+          {
+            title: "Documentation",
+            path: "/docs/md/ModularInteractions---ModularInteractions---Docs",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Dev Tools",
+    plugins: [
+      {
+        name: "Debug Function Library",
+        links: [
+          {
+            title: "Documentation",
+            path: "/docs/md/FunctionLibraries---DebugFunctionLibrary---Docs",
+          },
+        ],
+      },
+      {
+        name: "Trace Function Library",
+        links: [
+          {
+            title: "Documentation",
+            path: "/docs/md/FunctionLibraries---TraceFunctionLibrary---Docs",
+          },
+        ],
+      },
+    ],
+  },
+];
+
+export default navSections;
