@@ -74,7 +74,12 @@ const Navbar = () => {
           {sections.map((id) => (
             <button
               key={id}
-              onClick={() => handleSectionClick(id)}
+              onClick={() => {
+                // Force full reload with correct subpath + anchor
+                window.location.href = `${window.location.origin}${
+                  import.meta.env.BASE_URL
+                }#${id}`;
+              }}
               className={`relative group ${
                 !isDocsPage && activeSection === id
                   ? "text-accent-300"
