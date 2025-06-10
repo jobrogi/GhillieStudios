@@ -6,8 +6,9 @@ const Home = () => (
     className="relative flex flex-col items-center justify-center h-screen text-center px-6 scroll-mt-24"
     style={{
       backgroundColor: "var(--color-bg-100)",
-      backgroundImage:
-        "radial-gradient(circle at center, rgba(0,0,0,0.5) 0%, transparent 70%), url('/Background.png')",
+      backgroundImage: `radial-gradient(circle at center, rgba(0,0,0,0.5) 0%, transparent 70%), url('${
+        import.meta.env.BASE_URL
+      }Background.png')`,
       backgroundRepeat: "repeat",
       backgroundSize: "auto",
       backgroundBlendMode: "soft-light",
@@ -79,8 +80,10 @@ const Home = () => (
       </a>
 
       <button
+        type="button"
         disabled
-        className="mx-2 px-6 py-3 rounded-md font-semibold text-white bg-black/30 opacity-50 cursor-not-allowed transition-all duration-200 shadow-inner"
+        aria-disabled="true"
+        className="mx-2 px-6 py-3 rounded-md font-semibold text-white bg-black/40 opacity-50 cursor-not-allowed transition-all duration-200 shadow-inner pointer-events-none"
       >
         Explore Our Games
         <span className="ml-2 select-none">🚫</span>
