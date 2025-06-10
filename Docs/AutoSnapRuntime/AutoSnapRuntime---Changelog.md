@@ -4,7 +4,17 @@ Track all major updates and improvements to the AutoSnap – Runtime plugin.
 
 <div style="margin-top: 2rem;"></div>
 
-## [1.1.0] – Hotfixes + Bugs
+## [1.0.2] – Documentation Standardization
+
+### Updates
+
+- Updated docs to a standardized template
+
+<div style="margin-top: 2rem;"></div>
+
+## [1.0.1] – Hotfixes + Bugs
+
+### Updates
 
 - Fixed Content folders not generating
 - Fixed `AutoSnapControllerComponent` crashing engine if it is added to anything other than a character class.

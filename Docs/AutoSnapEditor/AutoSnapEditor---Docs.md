@@ -65,12 +65,12 @@ Follow these steps to get up and running quickly:
 
 ## Engine Compatibility
 
-| Unreal Engine Version | Supported                |
-| --------------------- | ------------------------ |
-| 5.3                   | ✅                       |
-| 5.4                   | ✅                       |
-| 5.5                   | ✅                       |
-| 5.6+                  | ⚠️ Not officially tested |
+| Unreal Engine Version | Supported |
+| --------------------- | --------- |
+| 5.3                   | ✅        |
+| 5.4                   | ✅        |
+| 5.5                   | ✅        |
+| 5.6+                  | ✅        |
 
 <div style="margin-top: 2rem;"></div>
 
