@@ -4,6 +4,16 @@ Track all major updates and improvements to the AutoSnap – Runtime plugin.
 
 <div style="margin-top: 2rem;"></div>
 
+## [1.0.3] – Bug Fixes + Feature Adding
+
+#### Updates
+
+- Added if you click off while having an actor selected then the grid and gizmo will hide itself
+- Made it so AutoSnapControllerComponent will not work on anything other than a parent class of type Character. Before doing this would crash the engine.
+- Added a example map for devs to see how everything works together
+
+<div style="margin-top: 2rem;"></div>
+
 ## [1.0.2] – Documentation Standardization
 
 ### Updates

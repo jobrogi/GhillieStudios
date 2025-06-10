@@ -4,7 +4,7 @@
 
 ## [1.0.1] – Documentation Standardization
 
-### Updates
+#### Updates
 
 - Updated docs to a standardized template
 
