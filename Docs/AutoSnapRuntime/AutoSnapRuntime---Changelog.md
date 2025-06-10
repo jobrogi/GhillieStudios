@@ -33,4 +33,43 @@ Track all major updates and improvements to the AutoSnap – Runtime plugin.
 
 <div style="margin-top: 2rem;"></div>
 
-> 💡 Have a request? Suggest features in [Ghillie Studios Discord](https://discord.gg/6xmYHNKk)
+<h2>Need Help?</h2>
+
+<ul style="list-style: none; padding-left: 0;">
+  <li>
+    📬 <strong>Email:</strong>
+    <span id="email" style="cursor: pointer; color: #00f; text-decoration: underline;" onclick="copyEmail()">
+      Jobrogi@gmail.com
+    </span>
+    <span id="copiedMsg" style="color: green; margin-left: 10px; display: none;">✔️ Copied!</span>
+  </li>
+  <li>
+    💬 <strong>Discord:</strong>
+    <a href="https://discord.gg/AFVyqXBSRW" target="_blank" rel="noopener noreferrer">
+      Join our community
+    </a>
+  </li>
+  <li>
+    🌐 <strong>Docs Hub:</strong>
+    <a href="https://jobrogi.github.io/GhillieStudios" target="_blank" rel="noopener noreferrer">
+      Ghillie Studios Website
+    </a>
+  </li>
+</ul>
+
+<blockquote>
+  Built by Ghillie Studios.<br>
+  All plugins support Unreal Engine 5.3–5.5 unless otherwise noted.
+</blockquote>
+
+<script>
+  function copyEmail() {
+    navigator.clipboard.writeText("Jobrogi@gmail.com").then(() => {
+      const msg = document.getElementById("copiedMsg");
+      msg.style.display = "inline";
+      setTimeout(() => {
+        msg.style.display = "none";
+      }, 2000);
+    });
+  }
+</script>
