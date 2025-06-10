@@ -20,18 +20,31 @@ Follow these steps to get up and running quickly:
    - Enable the plugin under **Edit > Plugins > AutoSnap – Runtime**, then restart the editor.
    - Add the `AutoSnapControllerComponent` to your player character or controller Blueprint.
 
-3. **Using the Plugin**
+### 3. Using the Plugin
 
-   - The component will:
-     - Spawn the gizmo and grid at runtime
-     - Handle all input mapping and snapping logic
-     - Automatically assign default Blueprint assets if none are set
-   - In the Details panel, assign:
-     - **Grid Visualizer Class**: `BP_GridVisualizer`
-     - **Runtime Gizmo Class**: `BP_Gizmo`
-     - **Input Mapping Context**: `IMC_AutoSnap`
-     - **Select Action**: `IA_LeftClick`
-     - (Optional) Enable “Require Actor Tag” and set it to: `SnapSelectable`
+The `AutoSnapControllerComponent` is designed **exclusively for Character classes**.  
+If you add it to any other type of actor (such as a Pawn or custom AActor), the component will **automatically disable itself** at runtime to prevent errors or crashes.
+
+When placed on a valid Character Blueprint, the component will:
+
+- Spawn the gizmo and grid automatically at runtime
+- Handle all Enhanced Input bindings and grid-snapping logic
+- Automatically assign default plugin Blueprint assets if none are specified
+
+By default, all asset and input references in the component’s **Details Panel** are left blank.  
+If they remain blank at runtime, the system will **automatically load default versions** of the following:
+
+- **Grid Visualizer Class**: `BP_GridVisualizer`
+- **Runtime Gizmo Class**: `BP_Gizmo`
+- **Input Mapping Context**: `IMC_AutoSnap`
+- **Select Action**: `IA_LeftClick`
+
+This means you **don’t need to create or assign your own assets** unless you want to customize behavior or visuals.  
+The plugin will still work out of the box with no extra setup.
+
+**Optional:**  
+To limit snapping to specific actors, enable **“Require Actor Tag”** in the Details panel and set the tag to:  
+`SnapSelectable`
 
 <div style="margin-top: 2rem;"></div>
 
