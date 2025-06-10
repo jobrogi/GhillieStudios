@@ -20,7 +20,7 @@ Follow these steps to get up and running quickly:
    - Enable the plugin under **Edit > Plugins > AutoSnap – Runtime**, then restart the editor.
    - Add the `AutoSnapControllerComponent` to your player character or controller Blueprint.
 
-### 3. Using the Plugin
+3. **Using the Plugin**
 
 The `AutoSnapControllerComponent` is designed **exclusively for Character classes**.  
 If you add it to any other type of actor (such as a Pawn or custom AActor), the component will **automatically disable itself** at runtime to prevent errors or crashes.
