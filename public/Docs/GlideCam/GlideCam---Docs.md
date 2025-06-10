@@ -1,57 +1,84 @@
 # GlideCam – Lite RTS Camera System
 
-> **Note:**  
-> We have transitioned to a **plugin-based installation** method via the Fab Marketplace. This change was made to resolve reliability issues with our previous import-based setup, which caused frequent asset path errors and inconsistent behavior between projects.
->
-> After installation through the Fab tab, you can find all included assets under:
+GlideCam – Lite is a modular Blueprint-based RTS camera system featuring smooth glide movement, zooming, and panning via enhanced input. It’s designed for strategy-style games and quick integration, with full support for UE5.3+ and out-of-the-box Fab Marketplace installation.
 
-> <pre><code> /All/EngineData/Plugins/GlideCam </pre></code>
->
-> This is expected behavior for engine-installed plugins. If you'd prefer to work directly inside your main content folder, you may manually migrate selected assets into `/Game/` — or use the included utility tools to streamline the process.
+<div style="margin-top: 2rem;"></div>
 
-## Installation (FAB Marketplace)
+## Getting Started
 
-1. **Purchase and add the plugin** via the [Fab Marketplace](https://www.fab.com/portal/listings/e2c9ffb0-84cc-49fa-8ab4-3b98a4187ae3/edit).
+Follow these steps to get up and running quickly:
 
-2. **Inside the Epic Games Launcher**, go to the **Library** tab → locate `GlideCam` → click **Add to Project**.
+1. **Install the Plugin**
 
-![image](https://github.com/user-attachments/assets/362ad79b-a859-4099-8f73-b4273c0984b1)
+   - [Installation Guide](/docs/md/Docs---Installation)
 
-3. In your Unreal Engine project, go to `Edit → Plugins`, search for **GlideCam**, and ensure the plugin is **enabled**.
+2. **Initial Setup**
 
-![image](https://github.com/user-attachments/assets/f1827add-2b48-4f6b-9206-4eb7fd0ddf0b)
+   - In Unreal Engine, go to `Edit → Plugins`, search for **GlideCam**, and enable the plugin.
+   - Restart the engine when prompted.
 
-4. **Restart the engine** when prompted.
+3. **Using the Plugin**
 
-5. After restarting, the plugin content will appear under:
+   - Option 1: In **World Settings**, set `GameMode Override` to `BP_PlayerCharacterGamemode`.
+   - Option 2: Manually add `BP_GlideCamPawn` to your level and assign `IMC_GlideCamControls` to your input setup.
+   - All plugin content is located at:  
+     `/All/EngineData/Plugins/GlideCam`
 
-`/All/EngineData/Plugins/GlideCam`
+<div style="margin-top: 2rem;"></div>
 
-## How To Use
+## Features Overview
 
-Theres two ways to use this plugin.
+| Feature                | Description                                                     |
+| ---------------------- | --------------------------------------------------------------- |
+| Glide Movement         | Smooth camera transitions with acceleration and drag            |
+| Zoom + Rotate + Reset  | Scroll-based zoom, Q/E rotation, and reset orientation with `R` |
+| RTS Drag Panning       | Right-mouse drag to pan across the map                          |
+| Enhanced Input Support | Uses Input Mapping Context and Input Actions                    |
+| Blueprint-Only System  | No C++ required — everything editable in Blueprint              |
+| Easy Customization     | All behavior settings exposed via variables                     |
 
-1. Go to your world settings window -> GameMode Override
+<div style="margin-top: 2rem;"></div>
 
-   ![image](https://github.com/user-attachments/assets/5bd8259f-2b58-4e15-a678-1d6793fd89c3)
+## Included Files
 
-   -> Then Select `BP_PlayerCharacterGaemode`
+| File/Folder Path                | Description                                        |
+| ------------------------------- | -------------------------------------------------- |
+| `/Plugins/GlideCam/Blueprints/` | `BP_GlideCamPawn`, `BP_PlayerCharacterGamemode`    |
+| `/Plugins/GlideCam/Input/`      | `IMC_GlideCamControls`, `IA_Move`, `IA_Zoom`, etc. |
+| `/Plugins/GlideCam/Resources/`  | Icons and thumbnails (if applicable)               |
 
-   ![image](https://github.com/user-attachments/assets/afcb630f-da79-4029-8e66-816bf0db287f)
+<div style="margin-top: 2rem;"></div>
 
-   -> Test out your new Camera Controller!
+## Settings Overview
 
-2. Go to `/All/EngineData/Plugins/GlideCam`
-   -> Here you have access to all the content from GlideCam Lite.
+| Setting Name           | Location                        | Description                                              |
+| ---------------------- | ------------------------------- | -------------------------------------------------------- |
+| `ZoomStrength`         | BP_GlideCamPawn (Details panel) | Controls scroll wheel zoom sensitivity                   |
+| `RotationSpeed`        | BP_GlideCamPawn                 | Speed of camera rotation using Q/E                       |
+| `bEnableDragPan`       | BP_GlideCamPawn                 | Enables/disables RTS-style right-click drag panning      |
+| `IMC_GlideCamControls` | Input Mapping Context           | Enhanced Input setup for movement, zoom, rotate, etc.    |
+| `IA_*`                 | Input Actions                   | Mapped actions like `IA_Zoom`, `IA_Move`, `IA_Pan`, etc. |
 
-   ![image](https://github.com/user-attachments/assets/5d9736f2-2bea-4e84-95c2-02cf9c434a29)
-   ![image](https://github.com/user-attachments/assets/e3a55711-a376-4be2-a486-09997107d05f)
-   ![image](https://github.com/user-attachments/assets/c512f855-91d2-483e-b8a1-9ee43ea09513)
+<div style="margin-top: 2rem;"></div>
 
-   -> From here feel free to Modify and BPs or Inputs via the `Input Actions` Or `Input Mapping Content`!
-   -> Actual Setup is the same as 1.
+## Engine Compatibility
 
-## Default Controls
+| Unreal Engine Version | Supported                |
+| --------------------- | ------------------------ |
+| 5.3                   | ✅                       |
+| 5.4                   | ✅                       |
+| 5.5                   | ✅                       |
+| 5.6+                  | ⚠️ Not officially tested |
+
+<div style="margin-top: 2rem;"></div>
+
+## Notes
+
+- ⚠️ This plugin requires the **Enhanced Input** plugin to be enabled in your project.
+- If you prefer to migrate assets into `/Game/`, you may do so manually or use included utilities.
+- All default controls are editable via the `IMC_GlideCamControls` mapping context.
+
+### Default Controls
 
 | Action               | Input               |
 | -------------------- | ------------------- |
@@ -60,29 +87,6 @@ Theres two ways to use this plugin.
 | Reset Orientation    | R                   |
 | Zoom                 | Mouse Scroll Wheel  |
 | Drag Pan (RTS-style) | Right Mouse Drag    |
-
-All input actions can be customized through the `IMC_GlideCamControls` mapping context.
-
-## Key Features
-
-- ✅ Smooth glide-based camera movement
-- ✅ Zooming and rotation with inertia
-- ✅ RTS-style mouse drag panning
-- ✅ Blueprint-only system — no C++ required
-- ✅ Fully modular and easy to integrate
-- ✅ Enhanced Input support out-of-the-box
-
-## Components
-
-- `BP_GlideCamPawn`: Main camera controller Blueprint.
-- `IMC_GlideCamControls`: Input Mapping Context.
-- `IA_*`: Input Actions for movement, rotation, etc.
-
-## Notes
-
-- ⚠️ **Requires Enhanced Input plugin** — this must be enabled in your project.
-- You can expose camera speed, damping, and other settings via Blueprint variables.
-- Snapping angle and zoom limits can be customized in the editor.
 
 <div style="margin-top: 2rem;"></div>
 

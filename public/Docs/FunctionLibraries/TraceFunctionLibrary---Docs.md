@@ -3,7 +3,30 @@
 A streamlined plugin offering a complete set of Blueprint-callable trace and sweep functions tailored for FPS, third-person, and RTS games in Unreal Engine 5.4+.  
 This library removes boilerplate tracing logic and adds debug-friendly, flexible alternatives to standard line, sweep, and visibility checks.
 
-## Plugin Overview
+<div style="margin-top: 2rem;"></div>
+
+## Getting Started
+
+Follow these steps to get up and running quickly:
+
+1. **Install the Plugin**
+
+   - [Installation Guide](/docs/md/Docs---Installation)
+
+2. **Initial Setup**
+
+   - Enable the plugin under **Edit > Plugins > Trace Function Library**, then restart the editor.
+
+3. **Using the Plugin**
+
+   - Open any Blueprint (e.g. Character, Controller, Utility).
+   - Right-click in the Event Graph and search for functions in the **Trace Function Library** category.
+   - Use nodes like `TraceFromCameraByType`, `SweepFromActorShape`, or `ConeTraceMulti`.
+   - Toggle `bDrawDebug` on nodes to enable debug visuals for tracing and collision checks.
+
+<div style="margin-top: 2rem;"></div>
+
+## Features Overview
 
 | Feature Category     | Description                                                         |
 | -------------------- | ------------------------------------------------------------------- |
@@ -13,66 +36,49 @@ This library removes boilerplate tracing logic and adds debug-friendly, flexible
 | Debug Visualization  | Draw lines, shapes, and impact points to aid development            |
 | Utility Functions    | Includes ground detection, socket tracing, and deprojection helpers |
 
-## Installation
+<div style="margin-top: 2rem;"></div>
 
-1. Purchase or download the plugin from the Fab Marketplace
-2. Open your Unreal project and go to `Edit > Plugins`
-3. Enable **Trace Function Library** and restart the editor
+## Included Files
 
-## Quick Start
+| File/Folder Path                               | Description                                          |
+| ---------------------------------------------- | ---------------------------------------------------- |
+| `/Plugins/TraceFunctionLibrary/Source/`        | C++ trace logic, enums, and Blueprint function nodes |
+| `/Plugins/TraceFunctionLibrary/Blueprints/`    | Example nodes (if included)                          |
+| `/Plugins/TraceFunctionLibrary/Documentation/` | Optional Markdown documentation or usage notes       |
 
-All functions are available in Blueprint under:
+<div style="margin-top: 2rem;"></div>
 
-> **Trace Function Library**
+## Settings Overview
 
-### Blueprint Usage:
+| Setting Name       | Location              | Description                                           |
+| ------------------ | --------------------- | ----------------------------------------------------- |
+| `bDrawDebug`       | Per node input        | Enables line, shape, or impact point drawing          |
+| `TraceColor`       | Per node input        | Color for lines when no hit is detected               |
+| `HitColor`         | Per node input        | Color used at hit location (impact point)             |
+| `DebugDuration`    | Per node input        | Duration for which the debug visual remains on-screen |
+| `ECameraTraceType` | Function input (enum) | Trace mode: `FPS`, `ThirdPerson`, or `RTS`            |
 
-1. Open any Blueprint (e.g. Character, Controller, Utility)
-2. Right-click in the graph and search for trace nodes
-3. Choose from the **Trace Function Library** category
-4. Toggle `bDrawDebug` to visualize during gameplay
+<div style="margin-top: 2rem;"></div>
 
-## Function List
+## Engine Compatibility
 
-| Function Name                 | Description                                                              |
-| ----------------------------- | ------------------------------------------------------------------------ |
-| `TraceFromCameraByType`       | Line trace from player’s viewpoint (FPS, third-person, or RTS mode)      |
-| `SphereTraceFromCameraByType` | Sphere trace variant for wider collision                                 |
-| `LineTraceMultiFromCamera`    | Multi-hit line trace from the player camera                              |
-| `SweepFromActorShape`         | Shape-based sweep from actor’s origin using box, sphere, or capsule      |
-| `TraceGroundBelowActor`       | Downward trace to detect ground surface beneath the actor                |
-| `TraceCeilingAboveActor`      | Upward trace to detect ceilings or overhead blockers                     |
-| `GetCameraTraceStartEnd`      | Gets start and end points based on selected camera trace mode            |
-| `DrawDebugTraceShape`         | Renders debug visual for shape traces (impact, sweep direction, etc.)    |
-| `GetRandomGroundPointNearby`  | Finds a walkable location near a given point                             |
-| `ConeTraceMulti`              | Cone-shaped sweep for vision detection or spread checks                  |
-| `TraceFromSocket`             | Performs trace from socket on skeletal mesh (useful for weapons/effects) |
+| Unreal Engine Version | Supported |
+| --------------------- | --------- |
+| 5.3                   | ✅        |
+| 5.4                   | ✅        |
+| 5.5                   | ✅        |
+| 5.6+                  | ✅        |
 
-## Camera Trace Modes
+<div style="margin-top: 2rem;"></div>
 
-**Enum: `ECameraTraceType`**
+## Notes
 
-- `FPS` → Trace from camera forward vector
-- `ThirdPerson` → Trace from pawn's position and forward
-- `RTS` → Trace from deprojected mouse cursor on screen
-
-## Debug Options
-
-Most functions accept these common debug settings:
-
-- `bDrawDebug`: Enable/disable debug visuals
-- `TraceColor`: Line color when nothing is hit
-- `HitColor`: Color of the impact point
-- `DebugDuration`: Time in seconds the visuals stay active
-
-## Version Compatibility
-
-Compatible with:
-
-- Unreal Engine 5.3
-- Unreal Engine 5.4
-- Unreal Engine 5.5
-- Unreal Engine 5.6
+- All functions are available under the **Trace Function Library** category in Blueprint.
+- The `ECameraTraceType` enum allows different tracing behavior depending on your game type:
+  - `FPS` → Trace forward from the player’s camera.
+  - `ThirdPerson` → Trace from the player’s mesh location forward.
+  - `RTS` → Deprojects the mouse cursor to determine trace direction.
+- Use `DrawDebugTraceShape` for visualizing the results of any trace or sweep during gameplay.
 
 <div style="margin-top: 2rem;"></div>
 
