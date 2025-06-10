@@ -56,7 +56,7 @@ const Navbar = () => {
           {sections.map((id) => (
             <a
               key={id}
-              href={`/#${id}`}
+              href={`${import.meta.env.BASE_URL}#${id}`}
               className={`relative group ${
                 !isDocsPage && activeSection === id
                   ? "text-accent-300"
