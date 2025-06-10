@@ -11,6 +11,7 @@ const Documentation = () => (
         backgroundImage: `url('${import.meta.env.BASE_URL}Background.png')`,
         backgroundRepeat: "repeat",
         backgroundSize: "auto",
+        backgroundAttachment: "fixed",
         backgroundBlendMode: "soft-light",
         filter: "blur(3px)",
       }}
