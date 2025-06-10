@@ -136,15 +136,35 @@ Feel free to modify these to your hearts desire!
 | `IA_SavePosition`    | Save current transform to slot                 |
 | `IA_LoadPosition`    | Load from slot to active camera                |
 
-<div style="margin-bottom: 2rem;"></div>
+<div style="margin-top: 2rem;"></div>
 
-## ❓ Support
+<h2>Need Help?</h2>
 
-<div style="margin-top: 1rem;"></div>
+<ul>
+  <li>
+     <strong>Email:</strong> <code>Jobrogi@gmail.com</code><br />
+    <small>Copy and paste into your email client</small>
+  </li>
+  <li>
+     <strong>Discord:</strong>
+    <a href="https://discord.gg/AFVyqXBSRW" target="_blank" rel="noopener noreferrer">
+      Join our community
+    </a>
+  </li>
+  <li>
+     <strong>Main Docs:</strong>
+    <a href="https://jobrogi.github.io/GhillieStudios" target="_blank" rel="noopener noreferrer">
+      Ghillie Studios Website
+    </a>
+  </li>
+  <li>
+     <strong>Fab Store:</strong>
+    <a href="https://www.fab.com/sellers/Ghillie%20Studios" target="_blank" rel="noopener noreferrer">
+      Ghillie Studios on Fab
+    </a>
+  </li>
+</ul>
 
-For setup help, bug reports, or feature requests, please contact:
-
-- **Email**: `Jobrogi@gmail.com`
-- **Community Discord**: [[Ghillie Studios Discord]](https://discord.gg/6xmYHNKk)
-
-<div style="margin-bottom: 2rem;"></div>
+<blockquote>
+  Built by Ghillie Studios. All plugins support Unreal Engine 5.3–5.5 unless otherwise noted.
+</blockquote>

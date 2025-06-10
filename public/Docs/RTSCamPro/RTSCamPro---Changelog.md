@@ -1,7 +1,5 @@
 # RTSCamPro – Changelog
 
-This document lists all notable changes to the RTSCamPro plugin.
-
 <div style="margin-top: 2rem;"></div>
 
 ## [1.0.0] – Initial Release
@@ -38,3 +36,34 @@ This document lists all notable changes to the RTSCamPro plugin.
 - Add Optional UX label based on the tag features
 
 <div style="margin-top: 2rem;"></div>
+
+<h2>Need Help?</h2>
+
+<ul>
+  <li>
+     <strong>Email:</strong> <code>Jobrogi@gmail.com</code><br />
+    <small>Copy and paste into your email client</small>
+  </li>
+  <li>
+     <strong>Discord:</strong>
+    <a href="https://discord.gg/AFVyqXBSRW" target="_blank" rel="noopener noreferrer">
+      Join our community
+    </a>
+  </li>
+  <li>
+     <strong>Main Docs:</strong>
+    <a href="https://jobrogi.github.io/GhillieStudios" target="_blank" rel="noopener noreferrer">
+      Ghillie Studios Website
+    </a>
+  </li>
+  <li>
+     <strong>Fab Store:</strong>
+    <a href="https://www.fab.com/sellers/Ghillie%20Studios" target="_blank" rel="noopener noreferrer">
+      Ghillie Studios on Fab
+    </a>
+  </li>
+</ul>
+
+<blockquote>
+  Built by Ghillie Studios. All plugins support Unreal Engine 5.3–5.5 unless otherwise noted.
+</blockquote>

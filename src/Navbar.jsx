@@ -70,7 +70,7 @@ const Navbar = () => {
         </Link>
 
         {/* Nav Links */}
-        <nav className="flex space-x-6 text-sm font-medium items-center hover:cursor-pointer">
+        <nav className="flex space-x-6 text-sm font-medium items-center">
           {sections.map((id) => (
             <button
               key={id}
@@ -80,7 +80,7 @@ const Navbar = () => {
                   import.meta.env.BASE_URL
                 }#${id}`;
               }}
-              className={`relative group ${
+              className={`relative group hover:cursor-pointer ${
                 !isDocsPage && activeSection === id
                   ? "text-accent-300"
                   : "text-text-secondary"
