@@ -54,9 +54,18 @@ const Navbar = () => {
         {/* Nav Links */}
         <nav className="flex space-x-6 text-sm font-medium items-center">
           {sections.map((id) => (
-            <a
+            <Link
               key={id}
-              href={`${import.meta.env.BASE_URL}#${id}`}
+              to={`/#${id}`}
+              onClick={(e) => {
+                if (location.pathname !== "/") {
+                  // Let the page navigate, then scroll after it's loaded
+                  setTimeout(() => {
+                    const el = document.getElementById(id);
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }, 100);
+                }
+              }}
               className={`relative group ${
                 !isDocsPage && activeSection === id
                   ? "text-accent-300"
@@ -70,8 +79,8 @@ const Navbar = () => {
                     ? "w-full bg-accent-300"
                     : "w-0 group-hover:w-full bg-accent-300"
                 }`}
-              ></span>
-            </a>
+              />
+            </Link>
           ))}
 
           {/* Divider */}
