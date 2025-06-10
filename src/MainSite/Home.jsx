@@ -10,8 +10,10 @@ const Home = () => (
         import.meta.env.BASE_URL
       }Background.png')`,
       backgroundRepeat: "repeat",
-      backgroundSize: "auto",
+      backgroundSize: "cover",
       backgroundBlendMode: "soft-light",
+      backgroundAttachment: "fixed",
+      backgroundPosition: "center",
     }}
   >
     <div className="z-10 max-w-3xl mx-auto backdrop-blur-sm bg-bg-100/80 px-8 py-10 rounded-2xl shadow-xl border border-border ring-1 ring-accent/20 space-y-6">

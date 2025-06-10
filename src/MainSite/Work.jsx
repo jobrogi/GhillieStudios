@@ -42,8 +42,10 @@ const Work = () => (
         import.meta.env.BASE_URL
       }Background.png')`,
       backgroundRepeat: "repeat",
-      backgroundSize: "auto",
+      backgroundSize: "cover",
       backgroundBlendMode: "soft-light",
+      backgroundAttachment: "fixed",
+      backgroundPosition: "center",
     }}
   >
     <div className="max-w-7xl mx-auto text-center mb-16">
