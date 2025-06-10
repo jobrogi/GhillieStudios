@@ -57,7 +57,7 @@ const DocsNav = () => {
                               className={({ isActive }) =>
                                 `block px-2 py-1 rounded-md text-sm transition-all ${
                                   isActive
-                                    ? "bg-[#1a1a1a] text-white font-semibold"
+                                    ? "bg-accent-300 text-black font-semibold"
                                     : "hover:bg-[#1a1a1a] hover:text-white"
                                 }`
                               }
@@ -92,7 +92,7 @@ const DocsNav = () => {
                                   className={({ isActive }) =>
                                     `block px-2 py-1 rounded-md text-sm transition-all ${
                                       isActive
-                                        ? "bg-[#1a1a1a] text-white font-semibold"
+                                        ? "bg-accent-300 text-black font-semibold"
                                         : "hover:bg-[#1a1a1a] hover:text-white"
                                     }`
                                   }

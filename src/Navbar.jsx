@@ -56,7 +56,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Version Badge */}
         <span className="absolute hover:cursor-default top-1 right-3 text-[0.65rem] font-semibold text-text-secondary uppercase tracking-wide">
-          v1.1.0
+          v{__APP_VERSION__}
         </span>
 
         {/* Logo + Studio Name */}

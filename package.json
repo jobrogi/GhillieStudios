@@ -2,14 +2,15 @@
   "name": "ghilliestudios",
   "homepage": "https://jobrogi.github.io/GhillieStudios",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "bump-version": "npm version patch --no-git-tag-version",
+    "predeploy": "npm run bump-version && npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

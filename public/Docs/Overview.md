@@ -30,6 +30,33 @@ The following plugins are organized by category. Each listing includes direct li
 - [Installation Guide](/docs/md/Docs---Installation)
 - [Frequently Asked Questions](/docs/md/Docs---FAQ)
 
----
+<h2>Need Help?</h2>
 
-For support or to suggest new features or even if you find something wrong with the docs please reach out to us at the Ghillie Studios community on [Discord](https://discord.gg/CEjrYEu6).
+<ul>
+  <li>
+     <strong>Email:</strong> <code>Jobrogi@gmail.com</code><br />
+    <small>Copy and paste into your email client</small>
+  </li>
+  <li>
+     <strong>Discord:</strong>
+    <a href="https://discord.gg/AFVyqXBSRW" target="_blank" rel="noopener noreferrer">
+      Join our community
+    </a>
+  </li>
+  <li>
+     <strong>Main Docs:</strong>
+    <a href="https://jobrogi.github.io/GhillieStudios" target="_blank" rel="noopener noreferrer">
+      Ghillie Studios Website
+    </a>
+  </li>
+  <li>
+     <strong>Fab Store:</strong>
+    <a href="https://www.fab.com/sellers/Ghillie%20Studios" target="_blank" rel="noopener noreferrer">
+      Ghillie Studios on Fab
+    </a>
+  </li>
+</ul>
+
+<blockquote>
+  Built by Ghillie Studios. All plugins support Unreal Engine 5.3–5.5 unless otherwise noted.
+</blockquote>
