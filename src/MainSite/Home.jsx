@@ -69,11 +69,21 @@ const Home = () => (
         players — all from the ground up.
       </p>
 
-      <button className="hover:scale-[1.02] active:scale-[0.98] mx-2 px-6 py-3 rounded-md font-semibold text-white bg-accent hover:cursor-pointer bg-black/40 hover:bg-red-500 focus:outline-none transition-all duration-200 shadow-md hover:shadow-lg">
+      <a
+        href="https://www.fab.com/sellers/Ghillie%20Studios"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:scale-[1.02] active:scale-[0.98] mx-2 px-6 py-3 rounded-md font-semibold text-white bg-accent bg-black/40 hover:bg-red-500 focus:outline-none transition-all duration-200 shadow-md hover:shadow-lg"
+      >
         Explore Our Tools
-      </button>
-      <button className="hover:scale-[1.02] active:scale-[0.98] px-6 py-3 rounded-md font-semibold text-white bg-accent hover:cursor-pointer bg-black/40 hover:bg-red-500 focus:outline-none transition-all duration-200 shadow-md hover:shadow-lg">
+      </a>
+
+      <button
+        disabled
+        className="mx-2 px-6 py-3 rounded-md font-semibold text-white bg-black/20 cursor-not-allowed opacity-60 transition-all duration-200 shadow-md"
+      >
         Explore Our Games
+        <span className="ml-2 select-none">🚫</span>
       </button>
     </div>
   </section>
