@@ -70,7 +70,7 @@ const Navbar = () => {
         </Link>
 
         {/* Nav Links */}
-        <nav className="flex space-x-6 text-sm font-medium items-center">
+        <nav className="flex space-x-6 text-sm font-medium items-center hover:cursor-pointer">
           {sections.map((id) => (
             <button
               key={id}
