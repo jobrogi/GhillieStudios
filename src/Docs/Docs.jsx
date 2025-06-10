@@ -8,7 +8,7 @@ const Documentation = () => (
       className="absolute inset-0 z-0 bg-no-repeat bg-cover bg-center scale-105 "
       style={{
         backgroundColor: "var(--color-bg-100)",
-        backgroundImage: "url('/Background.png')",
+        backgroundImage: `url('${import.meta.env.BASE_URL}Background.png')`,
         backgroundRepeat: "repeat",
         backgroundSize: "auto",
         backgroundBlendMode: "soft-light",
