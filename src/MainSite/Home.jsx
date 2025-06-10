@@ -70,28 +70,31 @@ const Home = () => (
         players — all from the ground up.
       </p>
 
-      <a
-        href="https://www.fab.com/sellers/Ghillie%20Studios"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:scale-[1.02] active:scale-[0.98] mx-2 px-6 py-3 rounded-md font-semibold text-white bg-black/40 hover:bg-red-500 focus:outline-none transition-all duration-200 shadow-md hover:shadow-lg"
-      >
-        Explore Our Tools
-      </a>
-
-      <div className="relative group mx-2">
-        <button
-          type="button"
-          disabled
-          aria-disabled="true"
-          className="px-6 py-3 rounded-md font-semibold text-white bg-black/40 opacity-50 cursor-not-allowed transition-all duration-200 shadow-inner pointer-events-none"
+      <div className="flex justify-center gap-4">
+        {/* Explore Our Tools Button */}
+        <a
+          href="https://www.fab.com/sellers/Ghillie%20Studios"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:scale-[1.02] active:scale-[0.98] px-6 py-3 rounded-md font-semibold text-white bg-black/40 hover:bg-red-500 focus:outline-none transition-all duration-200 shadow-md hover:shadow-lg"
         >
-          Explore Our Games
-          <span className="ml-2 select-none">🚫</span>
-        </button>
-        <div className="absolute left-1/2 top-full mt-2 w-64 -translate-x-1/2 scale-95 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 z-50 bg-bg-100 text-sm text-text-secondary p-3 rounded-md shadow-lg border border-border">
-          Our game projects are currently in development and will be announced
-          soon!
+          Explore Our Tools
+        </a>
+
+        {/* Explore Our Games Button with Tooltip */}
+        <div className="relative group">
+          <button
+            type="button"
+            disabled
+            aria-disabled="true"
+            className="px-6 py-3 rounded-md font-semibold text-white bg-black/40 opacity-50 cursor-not-allowed transition-all duration-200 shadow-inner pointer-events-none"
+          >
+            Explore Our Games
+            <span className="ml-2 select-none"></span>
+          </button>
+          <div className="absolute left-1/2 top-full mt-2 w-64 -translate-x-1/2 scale-95 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 z-50 bg-bg-100 text-sm text-text-secondary p-3 rounded-md shadow-lg border border-border">
+            I swear we are working on it!
+          </div>
         </div>
       </div>
     </div>
