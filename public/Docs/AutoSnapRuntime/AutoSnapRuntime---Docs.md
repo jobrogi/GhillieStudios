@@ -115,12 +115,45 @@ This improves UX feedback and makes the tool more responsive for end users.
 ├── Input/
 │   ├── IMC_AutoSnap
 │   └── IA_LeftClick, IA_DragX, IA_SnapUp...</code></pre>
+<div style="margin-top: 2rem;"></div>
 
-<div style="margin-bottom: 2rem;"></div>
+<h2>Need Help?</h2>
 
-## Support
+<ul style="list-style: none; padding-left: 0;">
+  <li>
+    📬 <strong>Email:</strong>
+    <span id="email" style="cursor: pointer; color: #00f; text-decoration: underline;" onclick="copyEmail()">
+      Jobrogi@gmail.com
+    </span>
+    <span id="copiedMsg" style="color: green; margin-left: 10px; display: none;">✔️ Copied!</span>
+  </li>
+  <li>
+    💬 <strong>Discord:</strong>
+    <a href="https://discord.gg/AFVyqXBSRW" target="_blank" rel="noopener noreferrer">
+      Join our community
+    </a>
+  </li>
+  <li>
+    🌐 <strong>Docs Hub:</strong>
+    <a href="https://jobrogi.github.io/GhillieStudios" target="_blank" rel="noopener noreferrer">
+      Ghillie Studios Website
+    </a>
+  </li>
+</ul>
 
-- **Email**: [Jobrogi@gmail.com](mailto:Jobrogi@gmail.com)
-- **Discord**: [https://discord.gg/6xmYHNKk](https://discord.gg/6xmYHNKk)
+<blockquote>
+  Built by Ghillie Studios.<br>
+  All plugins support Unreal Engine 5.3–5.5 unless otherwise noted.
+</blockquote>
 
-For bug reports, plugin issues, or feature requests, reach out anytime.
+<script>
+  function copyEmail() {
+    navigator.clipboard.writeText("Jobrogi@gmail.com").then(() => {
+      const msg = document.getElementById("copiedMsg");
+      msg.style.display = "inline";
+      setTimeout(() => {
+        msg.style.display = "none";
+      }, 2000);
+    });
+  }
+</script>
