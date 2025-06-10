@@ -54,6 +54,11 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-bg-100/90 border-b border-border">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Version Badge */}
+        <span className="absolute hover:cursor-default top-1 right-3 text-[0.65rem] font-semibold text-text-secondary uppercase tracking-wide">
+          v1.1.0
+        </span>
+
         {/* Logo + Studio Name */}
         <Link
           to="/"
