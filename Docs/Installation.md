@@ -42,14 +42,35 @@ Once installed, plugin files will be located at:
 
 `[EngineInstallDirectory]/Engine/Plugins/[PluginName]/`
 
-## Need Help?
+<div style="margin-top: 2rem;"></div>
 
-Again, If something isn’t working or you're unsure about setup please use your support channels:
+<h2>Need Help?</h2>
 
-- **Discord:** [https://discord.gg/6xmYHNKk](https://discord.gg/6xmYHNKk)
-- **Support Email:** [Jobrogi@gmail.com](mailto:Jobrogi@gmail.com)
+<ul>
+  <li>
+     <strong>Email:</strong> <code>Jobrogi@gmail.com</code><br />
+    <small>Copy and paste into your email client</small>
+  </li>
+  <li>
+     <strong>Discord:</strong>
+    <a href="https://discord.gg/AFVyqXBSRW" target="_blank" rel="noopener noreferrer">
+      Join our community
+    </a>
+  </li>
+  <li>
+     <strong>Main Docs:</strong>
+    <a href="https://jobrogi.github.io/GhillieStudios" target="_blank" rel="noopener noreferrer">
+      Ghillie Studios Website
+    </a>
+  </li>
+  <li>
+     <strong>Fab Store:</strong>
+    <a href="https://www.fab.com/sellers/Ghillie%20Studios" target="_blank" rel="noopener noreferrer">
+      Ghillie Studios on Fab
+    </a>
+  </li>
+</ul>
 
----
-
-Ghillie Studios  
-Focused tools for focused developers.
+<blockquote>
+  Built by Ghillie Studios. All plugins support Unreal Engine 5.3–5.5 unless otherwise noted.
+</blockquote>

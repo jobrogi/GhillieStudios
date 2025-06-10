@@ -1,10 +1,5 @@
 # GlideCam – Lite RTS Camera System
 
-**Supported UE Versions:** 5.3, 5.4, 5.5, 5.6  
-**Author:** Ghillie Studios  
-**Support:** [Discord](https://discord.gg/6xmYHNKk)  
-**Showcase Video:** [Watch on YouTube](https://youtu.be/Fhj3NfSXJv4)
-
 > **Note:**  
 > We have transitioned to a **plugin-based installation** method via the Fab Marketplace. This change was made to resolve reliability issues with our previous import-based setup, which caused frequent asset path errors and inconsistent behavior between projects.
 >
@@ -88,3 +83,36 @@ All input actions can be customized through the `IMC_GlideCamControls` mapping c
 - ⚠️ **Requires Enhanced Input plugin** — this must be enabled in your project.
 - You can expose camera speed, damping, and other settings via Blueprint variables.
 - Snapping angle and zoom limits can be customized in the editor.
+
+<div style="margin-top: 2rem;"></div>
+
+<h2>Need Help?</h2>
+
+<ul>
+  <li>
+     <strong>Email:</strong> <code>Jobrogi@gmail.com</code><br />
+    <small>Copy and paste into your email client</small>
+  </li>
+  <li>
+     <strong>Discord:</strong>
+    <a href="https://discord.gg/AFVyqXBSRW" target="_blank" rel="noopener noreferrer">
+      Join our community
+    </a>
+  </li>
+  <li>
+     <strong>Main Docs:</strong>
+    <a href="https://jobrogi.github.io/GhillieStudios" target="_blank" rel="noopener noreferrer">
+      Ghillie Studios Website
+    </a>
+  </li>
+  <li>
+     <strong>Fab Store:</strong>
+    <a href="https://www.fab.com/sellers/Ghillie%20Studios" target="_blank" rel="noopener noreferrer">
+      Ghillie Studios on Fab
+    </a>
+  </li>
+</ul>
+
+<blockquote>
+  Built by Ghillie Studios. All plugins support Unreal Engine 5.3–5.5 unless otherwise noted.
+</blockquote>

@@ -24,50 +24,41 @@ This document outlines all major changes and additions to the AutoSnap – Edito
 - `FAutoSnapEditorManager` – Internal logic for snapping, input handling, and hotkey routing
 - Grid material and mesh – Optional visuals for runtime feedback
 - Editor keybindings:
+
   - `Shift + G` – Toggle snapping globally
   - `Shift + X/Y/Z` – Toggle snapping per axis
   - `Shift + Mouse Wheel` – Adjust snap distance
   - `Shift + D` – Toggle debug logs
 
-<div style="margin-top: 2rem;"></div>
+  <div style="margin-top: 2rem;"></div>
 
 <h2>Need Help?</h2>
 
-<ul style="list-style: none; padding-left: 0;">
+<ul>
   <li>
-    📬 <strong>Email:</strong>
-    <span id="email" style="cursor: pointer; color: #00f; text-decoration: underline;" onclick="copyEmail()">
-      Jobrogi@gmail.com
-    </span>
-    <span id="copiedMsg" style="color: green; margin-left: 10px; display: none;">✔️ Copied!</span>
+     <strong>Email:</strong> <code>Jobrogi@gmail.com</code><br />
+    <small>Copy and paste into your email client</small>
   </li>
   <li>
-    💬 <strong>Discord:</strong>
+     <strong>Discord:</strong>
     <a href="https://discord.gg/AFVyqXBSRW" target="_blank" rel="noopener noreferrer">
       Join our community
     </a>
   </li>
   <li>
-    🌐 <strong>Docs Hub:</strong>
+     <strong>Main Docs:</strong>
     <a href="https://jobrogi.github.io/GhillieStudios" target="_blank" rel="noopener noreferrer">
       Ghillie Studios Website
+    </a>
+  </li>
+  <li>
+     <strong>Fab Store:</strong>
+    <a href="https://www.fab.com/sellers/Ghillie%20Studios" target="_blank" rel="noopener noreferrer">
+      Ghillie Studios on Fab
     </a>
   </li>
 </ul>
 
 <blockquote>
-  Built by Ghillie Studios.<br>
-  All plugins support Unreal Engine 5.3–5.5 unless otherwise noted.
+  Built by Ghillie Studios. All plugins support Unreal Engine 5.3–5.5 unless otherwise noted.
 </blockquote>
-
-<script>
-  function copyEmail() {
-    navigator.clipboard.writeText("Jobrogi@gmail.com").then(() => {
-      const msg = document.getElementById("copiedMsg");
-      msg.style.display = "inline";
-      setTimeout(() => {
-        msg.style.display = "none";
-      }, 2000);
-    });
-  }
-</script>
