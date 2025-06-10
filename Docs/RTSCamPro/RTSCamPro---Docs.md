@@ -1,16 +1,30 @@
-# RTSCamPro - Premium RTS Camera System
+# RTSCamPro – Premium RTS Camera System
 
-<div style="margin-top: 1rem;"></div>
+RTSCamPro is a modular, high-performance RTS-style camera system designed for Unreal Engine 5. It combines a C++ backend for maximum performance with Blueprint classes for easy customization. Ideal for RTS, city builders, sims, and tactical games.
 
-**RTSCamPro** is a modular, high-performance RTS-style camera system designed for Unreal Engine 5. It combines a C++ backend for performance and Blueprint subclasses for easy override and customization. Ideal for RTS, simulation, city builders, and tactical games.
+<div style="margin-top: 2rem;"></div>
 
----
+## Getting Started
 
-<div style="margin-top: 1rem;"></div>
+Follow these steps to get up and running quickly:
+
+1. **Install the Plugin**
+
+   - [Installation Guide](/docs/md/Docs---Installation)
+
+2. **Initial Setup**
+
+   - Enable the plugin under **Edit > Plugins > RTSCamPro**, then restart the editor.
+   - Set your GameMode override to `BP_RTSCameraGamemode`, or drag `BP_RTSCamera` into your level manually.
+
+3. **Using the Plugin**
+
+   - The system is pre-wired with Enhanced Input and save/load support.
+   - Modify movement, tilt, zoom, FOV, or input logic using the Details panel or Blueprint overrides.
+
+<div style="margin-top: 2rem;"></div>
 
 ## Features Overview
-
-<div style="margin-top: 1rem;"></div>
 
 | Feature                    | Description                                                          |
 | -------------------------- | -------------------------------------------------------------------- |
@@ -30,91 +44,64 @@
 | Clean Project Structure    | Organized folders, comments, and no unused assets                    |
 | Game Ready                 | Drop-in functionality with minimal setup required                    |
 
----
+<div style="margin-top: 2rem;"></div>
 
-<div style="margin-bottom: 2rem;"></div>
+## Included Files
 
-### Included Files
+| File/Folder Path                 | Description                          |
+| -------------------------------- | ------------------------------------ |
+| `/Plugins/RTSCamPro/Blueprints/` | All core camera actors and GameModes |
+| `/Plugins/RTSCamPro/Input/`      | Enhanced Input Mapping & Actions     |
+| `/Plugins/RTSCamPro/UI/`         | Minimal UI assets (if any)           |
+| `/Plugins/RTSCamPro/SaveSystem/` | Save/Load Blueprint assets           |
+| `/Plugins/RTSCamPro/Demo/`       | Optional sample map or setup         |
 
-<div style="margin-top: 1rem;"></div>
-
-<pre><code>RTSCamPro/
-├── Content/
-│   └── RTSCamPro/
-│       ├── Blueprints/
-│       ├── Input/
-│       ├── SaveSystem/
-│       ├── UI/
-│       └── Demo/</code></pre>
-
-<div style="margin-bottom: 2rem;"></div>
+<div style="margin-top: 2rem;"></div>
 
 ## Settings Overview
 
-<div style="margin-top: 1rem;"></div>
+| Setting Name             | Location (BP_RTSCamera) | Description                                         |
+| ------------------------ | ----------------------- | --------------------------------------------------- |
+| Pan Speed / Damping      | RTS Settings Category   | Controls base pan speed and interpolation smoothing |
+| Zoom Speed / Damping     | RTS Settings Category   | Scroll speed and easing on zoom                     |
+| Rotation Speed / Damping | RTS Settings Category   | Smooth camera turning with easing                   |
+| Tilt Speed / Damping     | RTS Settings Category   | Up/down pitch motion controls                       |
+| Min/Max Zoom             | RTS Settings Category   | Zoom distance limits                                |
+| Min/Max Tilt             | RTS Settings Category   | Prevents extreme up/down camera pitch               |
+| Adaptive Rotate on Zoom  | RTS Settings Category   | Optional auto-rotate logic while zooming            |
+| FOV Settings             | RTS Settings Category   | Adjustable FOV, smoothing, min/max ranges           |
+| Camera Bounds            | RTS Settings Category   | World bounds in X/Y and whether bounds are enforced |
+| Edge Panning             | RTS Settings Category   | Enables edge scroll and configures trigger zone     |
+| Autosave Settings        | RTS Settings Category   | Time between saves and whether autosave is active   |
 
-All major behaviors are controlled within `BP_RTSCamera` under `RTS` Settings Category.
+<div style="margin-top: 2rem;"></div>
 
-<div style="margin-top: 1rem;"></div>
+## Engine Compatibility
 
-## RTSCamPro – Default Camera Configuration
+| Unreal Engine Version | Supported                |
+| --------------------- | ------------------------ |
+| 5.3                   | ✅                       |
+| 5.4                   | ✅                       |
+| 5.5                   | ✅                       |
+| 5.6+                  | ⚠️ Not officially tested |
 
-All configurable properties in the RTSCamPro camera system, including default values and concise descriptions.
+<div style="margin-top: 2rem;"></div>
 
-<div style="margin-top: 1rem;"></div>
+## Notes
 
-| Variable Type | Property                | Default Value    | Description                                         |
-| ------------- | ----------------------- | ---------------- | --------------------------------------------------- |
-| `float`       | Pan Speed               | 2000.0           | Speed of camera movement when panning.              |
-| `float`       | Pan Damping             | 2.0              | Damping applied to slow down pan motion.            |
-| `float`       | Zoom Speed              | 100.0            | How fast the camera zooms in or out.                |
-| `float`       | Zoom Damping            | 6.0              | Smooths the zoom motion for a natural feel.         |
-| `float`       | Min Zoom                | 500.0            | Minimum allowable camera zoom distance.             |
-| `float`       | Max Zoom                | 3000.0           | Maximum allowable camera zoom distance.             |
-| `float`       | Target Zoom Length      | 1500.0           | Default resting zoom value when system resets.      |
-| `float`       | Rotation Speed          | 90.0             | Speed at which the camera rotates left/right.       |
-| `float`       | Rotation Damping        | 8.0              | Damping applied to rotational motion.               |
-| `float`       | Min Tilt Angle          | -45.0            | Minimum angle the camera can tilt down.             |
-| `float`       | Max Tilt Angle          | -25.0            | Maximum angle the camera can tilt up.               |
-| `float`       | Tilt Speed              | 60.0             | Speed at which the camera tilts up or down.         |
-| `float`       | Tilt Damping            | 8.0              | Smoothing factor applied to tilt motion.            |
-| `bool`        | Adaptive Rotate on Zoom | (true)           | Automatically adjusts rotation based on zoom level. |
-| `float`       | Default FOV             | 90.0             | Starting field of view value.                       |
-| `float`       | Min FOV                 | 30.0             | Minimum field of view allowed.                      |
-| `float`       | Max FOV                 | 120.0            | Maximum field of view allowed.                      |
-| `float`       | FOV Adjustment Speed    | 2.0              | Speed at which FOV changes when triggered.          |
-| `bool`        | Auto Reset FOV          | (true)           | Resets FOV automatically when zoom resets.          |
-| `float`       | FOV Reset Delay         | 2.0              | Time before FOV auto-reset occurs.                  |
-| `bool`        | Use Camera Bounds       | (true)           | Enforces camera movement limits.                    |
-| `FVector2D`   | Camera Bounds X         | -3500.0 → 3500.0 | Horizontal panning limits.                          |
-| `FVector2D`   | Camera Bounds Y         | -3500.0 → 3500.0 | Vertical panning limits.                            |
-| `bool`        | Draw Bounding Box       | (false)          | Toggles debug visuals for bounds.                   |
-| `bool`        | Enable Edge Panning     | (true)           | Enables screen-edge panning.                        |
-| `float`       | Edge Pan Threshold      | 20.0             | Distance from edge before panning activates.        |
-| `bool`        | Enable Camera Autosave  | (true)           | Enables autosaving of camera settings.              |
-| `float`       | Autosave Interval (sec) | 10.0             | Time between autosave snapshots.                    |
+- Camera save slots (1–7) can be saved/restored with the included input actions.
+- All movement types support damping and smoothing via exposed Blueprint variables.
+- Default GameMode (`BP_RTSCameraGamemode`) loads input, camera, and save logic automatically.
+- Supports multiplayer safely by handling camera logic client-side only.
+- Fully customizable — extend any Blueprint or override Enhanced Input bindings to match your game style.
 
-> These values are defaults and can be fully overridden in the Details panel or programmatically at runtime.
-
-<div style="margin-bottom: 2rem;"></div>
-
----
-
-## Blueprint Classes
-
-<div style="margin-top: 1rem;"></div>
+### Blueprint Classes
 
 - `BP_RTSCamera`: The camera actor with Spring Arm & Camera.
 - `BP_RTSCameraController`: Handles input and movement logic.
-- `BP_RTSCameraGamemode`: Allows Developers to easily use the plugin.
-<div style="margin-bottom: 2rem;"></div>
+- `BP_RTSCameraGamemode`: Allows developers to easily use the plugin.
 
-## Input Actions (Enhanced Input)
-
-These Enhanced Input actions are bundled with RTSCamPro and pre-mapped in the controller.
-Feel free to modify these to your hearts desire!
-
-<div style="margin-bottom: 2rem;"></div>
+### Input Actions (Enhanced Input)
 
 | Action Name          | Description                                    |
 | -------------------- | ---------------------------------------------- |
@@ -138,7 +125,7 @@ Feel free to modify these to your hearts desire!
 
 <div style="margin-top: 2rem;"></div>
 
-<h2>Need Help?</h2>
+## Need Help?
 
 <ul>
   <li>

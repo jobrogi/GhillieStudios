@@ -2,9 +2,30 @@
 
 A powerful utility plugin providing 15+ Blueprint nodes to help developers debug gameplay systems, visualize trace results, and log categorized messages during development. Designed for fast iteration and clean project structure.
 
----
+<div style="margin-top: 2rem;"></div>
 
-## Plugin Overview
+## Getting Started
+
+Follow these steps to get up and running quickly:
+
+1. **Install the Plugin**
+
+   - [Installation Guide](/docs/md/Docs---Installation)
+
+2. **Initial Setup**
+
+   - Enable the plugin under **Edit > Plugins > Debug Function Library**, then restart the editor.
+
+3. **Using the Plugin**
+
+   - Open any Blueprint (e.g. Actor, Component, or Utility).
+   - Right-click in the Event Graph and search under `Debug → Advanced`.
+   - Use nodes like `PrintDebug`, `DrawDebugPath`, or `LogDebugToFile`.
+   - Categories can be enabled/disabled at runtime using `SetDebugCategoryEnabled`.
+
+<div style="margin-top: 2rem;"></div>
+
+## Features Overview
 
 | Feature Category      | Description                                                              |
 | --------------------- | ------------------------------------------------------------------------ |
@@ -14,76 +35,46 @@ A powerful utility plugin providing 15+ Blueprint nodes to help developers debug
 | Filterable Categories | Enable/disable debug categories in-game or via code                      |
 | Runtime File Logging  | Save debug output to `Saved/Logs` with timestamps                        |
 
----
+<div style="margin-top: 2rem;"></div>
 
-## Setup Instructions
+## Included Files
 
-### 1. Enable the Plugin
+| File/Folder Path                               | Description                                |
+| ---------------------------------------------- | ------------------------------------------ |
+| `/Plugins/DebugFunctionLibrary/Source/`        | C++ source for all Blueprint-exposed nodes |
+| `/Plugins/DebugFunctionLibrary/Blueprints/`    | Example Blueprints (if included)           |
+| `/Plugins/DebugFunctionLibrary/Documentation/` | Internal documentation and help content    |
 
-1. Open `Edit > Plugins` from the UE5 toolbar
-2. Search for **Debug Function Library**
-3. Enable the plugin and restart the editor if prompted
+<div style="margin-top: 2rem;"></div>
 
----
+## Settings Overview
 
-### 2. Access Blueprint Nodes
+| Setting Name              | Location                       | Description                                                  |
+| ------------------------- | ------------------------------ | ------------------------------------------------------------ |
+| `SetDebugCategoryEnabled` | Runtime (Blueprint or Console) | Enables or disables specific debug categories                |
+| `LogDebugToFile`          | Runtime (Blueprint)            | Logs messages to `.txt` files inside `Saved/Logs/` directory |
+| `ClearAllDebugLines`      | Runtime (Blueprint)            | Clears all debug shapes and visuals from the world           |
+| `GetRecentDebugMessages`  | Runtime (Blueprint)            | Retrieves all logs stored in the debug system’s buffer       |
 
-- Open any Blueprint (e.g. Actor, Component, Utility)
-- Right-click in the Event Graph
-- Navigate to: `Debug → Advanced`
-- Select a node such as `PrintDebug`, `DrawDebugTextAtActor`, or `DebugTraceResult`
+<div style="margin-top: 2rem;"></div>
 
-### 3. Sample Usage
+## Engine Compatibility
 
-Some of the most useful nodes include:
+| Unreal Engine Version | Supported                |
+| --------------------- | ------------------------ |
+| 5.3                   | ✅                       |
+| 5.4                   | ✅                       |
+| 5.5                   | ✅                       |
+| 5.6+                  | ⚠️ Not officially tested |
 
-| Node Name                | Purpose                                             |
-| ------------------------ | --------------------------------------------------- |
-| `PrintDebugAutoCategory` | Auto-categorizes a message based on caller name     |
-| `DrawDebugPath`          | Draws a series of connected points in 3D space      |
-| `HighlightActorOnce`     | Draws a temporary box around an actor's bounds      |
-| `LogDebugToFile`         | Saves text to `[Project]/Saved/Logs/` as .txt files |
+<div style="margin-top: 2rem;"></div>
 
-## Function List
+## Notes
 
-| Function Name                | Description                                                    |
-| ---------------------------- | -------------------------------------------------------------- |
-| `PrintDebug`                 | Logs a message to screen and output log with optional category |
-| `PrintDebugAutoCategory`     | Auto-tags messages with the calling object or Blueprint name   |
-| `DrawDebugTextAtActor`       | Places floating 3D text near an actor                          |
-| `DebugTraceResult`           | Performs a trace and shows hit info visually                   |
-| `DrawDebugCapsuleSimple`     | Draws a single capsule in the world                            |
-| `DrawDebugArrowFromActor`    | Arrow based on direction from an actor (e.g. Forward, Up)      |
-| `DrawDebugPath`              | Connects an array of points with lines (pathfinding, AI, etc.) |
-| `DrawDebugSphereArray`       | Draws debug spheres at a list of points                        |
-| `HighlightActorOnce`         | Draws a temporary bounds box on an actor                       |
-| `LogActorComponentHierarchy` | Logs the hierarchy of an actor’s components                    |
-| `RunDebugConsoleCommand`     | Runs a console command and logs it to the debug buffer         |
-| `LogDebugToFile`             | Appends timestamped messages to `.txt` files                   |
-| `GetRecentDebugMessages`     | Returns the current runtime debug log                          |
-| `ClearAllDebugLines`         | Removes all debug visuals from the world                       |
-| `SetDebugCategoryEnabled`    | Enables/disables a debug category at runtime                   |
-| `IsDebugCategoryEnabled`     | Checks if a debug category is currently active                 |
-
-## File Logging
-
-When using `LogDebugToFile`:
-
-- Logs are written to:  
-  `YourProject/Saved/Logs/YourFile.txt`
-
-- Each entry includes:
-  - A timestamp
-  - Category (if set)
-  - Message contents
-
-> Logs are automatically appended and folders auto-created as needed.
-
-## Category Filtering
-
-All debug functions support category-based filtering. You can use:
-
-<pre><code> SetDebugCategoryEnabled("Combat", false)</pre></code>
+- Most nodes are Blueprint-only and require no C++ knowledge.
+- All logs written with `LogDebugToFile` include timestamps and category names.
+- Debug visuals can be toggled or cleared entirely at runtime.
+- Use `SetDebugCategoryEnabled("YourCategory", false)` to disable a specific group of logs or visuals during testing.
 
 <div style="margin-top: 2rem;"></div>
 

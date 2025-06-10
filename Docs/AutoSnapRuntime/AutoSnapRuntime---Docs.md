@@ -1,17 +1,41 @@
 # AutoSnap – Runtime
 
-<div style="margin-top: 1rem;"></div>
+AutoSnap – Runtime brings powerful, grid-based snapping and transform controls to runtime actors in your Unreal Engine project. Designed for user-generated content workflows, in-game editors, or simulation-style building systems, this plugin gives developers precise, hotkey-controlled actor manipulation and snapping without needing the editor.
 
-**AutoSnap – Runtime** brings powerful, grid-based snapping and transform controls to runtime actors in your Unreal Engine project. Designed for user-generated content workflows, in-game editors, or simulation-style building systems, this plugin gives developers precise, hotkey-controlled actor manipulation and snapping without needing the editor.
-
-> Built for Unreal Engine 5.3+
+> Built for Unreal Engine 5.3+  
 > Runtime-Only | Blueprint Compatible | No External Dependencies
 
-<div style="margin-top: 1rem;"></div>
+<div style="margin-top: 2rem;"></div>
+
+## Getting Started
+
+Follow these steps to get up and running quickly:
+
+1. **Install the Plugin**
+
+   - [Installation Guide](/docs/md/Docs---Installation)
+
+2. **Initial Setup**
+
+   - Enable the plugin under **Edit > Plugins > AutoSnap – Runtime**, then restart the editor.
+   - Add the `AutoSnapControllerComponent` to your player character or controller Blueprint.
+
+3. **Using the Plugin**
+
+   - The component will:
+     - Spawn the gizmo and grid at runtime
+     - Handle all input mapping and snapping logic
+     - Automatically assign default Blueprint assets if none are set
+   - In the Details panel, assign:
+     - **Grid Visualizer Class**: `BP_GridVisualizer`
+     - **Runtime Gizmo Class**: `BP_Gizmo`
+     - **Input Mapping Context**: `IMC_AutoSnap`
+     - **Select Action**: `IA_LeftClick`
+     - (Optional) Enable “Require Actor Tag” and set it to: `SnapSelectable`
+
+<div style="margin-top: 2rem;"></div>
 
 ## Features Overview
-
-<div style="margin-top: 1rem;"></div>
 
 | Feature                   | Description                                                      |
 | ------------------------- | ---------------------------------------------------------------- |
@@ -27,94 +51,55 @@
 
 <div style="margin-top: 2rem;"></div>
 
-## Getting Started
+## Included Files
 
-<div style="margin-top: 1rem;"></div>
+| File/Folder Path                       | Description                                 |
+| -------------------------------------- | ------------------------------------------- |
+| `/Plugins/AutoSnapRuntime/Blueprints/` | `BP_Gizmo`, `BP_GridVisualizer`             |
+| `/Plugins/AutoSnapRuntime/Components/` | `AutoSnapControllerComponent` for logic     |
+| `/Plugins/AutoSnapRuntime/Input/`      | `IMC_AutoSnap`, `IA_LeftClick`, drag inputs |
 
-### 1. Enable the Plugin
+<div style="margin-top: 2rem;"></div>
 
-In the UE editor, go to **Edit > Plugins**, search for `AutoSnap - Runtime`, and enable it. Restart the editor if prompted.
+## Settings Overview
 
-### 2. Add the Component
+| Setting Name              | Location                              | Description                                             |
+| ------------------------- | ------------------------------------- | ------------------------------------------------------- |
+| `GizmoClass`              | AutoSnapControllerComponent (Details) | Actor gizmo used for dragging                           |
+| `GridVisualizerClass`     | AutoSnapControllerComponent (Details) | Actor grid used for snapping feedback                   |
+| `InputMappingContext`     | AutoSnapControllerComponent (Details) | Input bindings for interaction                          |
+| `bUseActorTagRequirement` | AutoSnapControllerComponent (Details) | Restrict snap logic to actors with a specific tag       |
+| `RequiredActorTag`        | AutoSnapControllerComponent (Details) | Tag used for selectable actors (e.g., `SnapSelectable`) |
 
-In your player character or controller Blueprint, add the `AutoSnapControllerComponent`.
+<div style="margin-top: 2rem;"></div>
 
-The component will automatically:
+## Engine Compatibility
 
-- Spawn the runtime gizmo and grid visualizer
-- Handle input mapping and selection
-- Snap tagged actors during drag
+| Unreal Engine Version | Supported                |
+| --------------------- | ------------------------ |
+| 5.3                   | ✅                       |
+| 5.4                   | ✅                       |
+| 5.5                   | ✅                       |
+| 5.6+                  | ⚠️ Not officially tested |
 
-### 3. Assign Required Fields
+<div style="margin-top: 2rem;"></div>
 
-In the component's Details panel:
+## Notes
 
-- **Grid Visualizer Class**: `BP_GridVisualizer`
-- **Runtime Gizmo Class**: `BP_Gizmo`
-- **Input Mapping Context**: `IMC_AutoSnap`
-- **Select Action**: `IA_LeftClick`
-- _(Optional)_ Enable "Require Actor Tag" and assign: `SnapSelectable`
+- Hover feedback requires an optional trace channel named `Gizmo` (see below).
+- Default Blueprint classes are auto-assigned if you leave them empty.
+- All inputs are Enhanced Input–based. You can override them with your own actions or contexts.
 
-If left empty, plugin will assign defaults during runtime.
+### Optional Trace Channel for Hover FX
 
-## Input Actions (Enhanced Input)
+To enable hover color feedback on gizmo parts:
 
-<div style="margin-top: 1rem;"></div>
+1. Go to **Edit > Project Settings > Collision**
+2. Add a new Trace Channel:
+   - **Name**: `Gizmo`
+   - **Default Response**: `Block`
 
-| Action Name    | Description                      |
-| -------------- | -------------------------------- |
-| `IA_LeftClick` | Select or deselect actor         |
-| `IA_DragX`     | Drag selected actor along X axis |
-| `IA_DragY`     | Drag selected actor along Y axis |
-| `IA_DragZ`     | Drag selected actor along Z axis |
-| `IA_DragXY`    | Drag actor along XY plane        |
-| `IA_DragXZ`    | Drag actor along XZ plane        |
-| `IA_DragYZ`    | Drag actor along YZ plane        |
-| `IA_SnapUp`    | Increase grid snap unit size     |
-| `IA_SnapDown`  | Decrease grid snap unit size     |
-
-You can assign your own input actions and mapping context if preferred.
-
-## Trace Channel Setup (Optional for Hover FX)
-
-<div style="margin-top: 1rem;"></div>
-
-This plugin supports a custom trace channel named `Gizmo` for **hover feedback only**.
-
-If not configured, the system still works — just without arrow color changes.
-
-### How to Add the Channel:
-
-1. Go to **Edit > Project Settings**
-2. Find the **Collision** category
-3. Add a **New Trace Channel**:
-
-   - Name: `Gizmo`
-   - Default Response: `Block`
-
-### How to Apply It (Optional):
-
-In the `BP_Gizmo` Blueprint:
-
-- Set **Collision Preset** to `Custom`
-- Under **Trace Responses**, set `Gizmo` to `Block`
-
-## Result
-
-When you hover over a gizmo arrow/plane in runtime, its color will change to indicate interactivity.
-This improves UX feedback and makes the tool more responsive for end users.
-
-## Plugin Folder Contents
-
-<pre><code>AutoSnapRuntime/
-├── Blueprints/
-│   ├── BP_Gizmo
-│   ├── BP_GridVisualizer
-├── Components/
-│   └── AutoSnapControllerComponent
-├── Input/
-│   ├── IMC_AutoSnap
-│   └── IA_LeftClick, IA_DragX, IA_SnapUp...</code></pre>
+Then update the collision preset in `BP_Gizmo` to block the `Gizmo` channel.
 
 <div style="margin-top: 2rem;"></div>
 
