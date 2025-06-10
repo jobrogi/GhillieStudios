@@ -38,7 +38,9 @@ const Work = () => (
     className="w-full text-text-primary py-28 px-6 scroll-mt-24"
     style={{
       backgroundColor: "var(--color-bg-100)",
-      backgroundImage: "url('/Background.png')",
+      backgroundImage: `radial-gradient(circle at center, rgba(0,0,0,0.5) 0%, transparent 70%), url('${
+        import.meta.env.BASE_URL
+      }Background.png')`,
       backgroundRepeat: "repeat",
       backgroundSize: "auto",
       backgroundBlendMode: "soft-light",

@@ -79,15 +79,21 @@ const Home = () => (
         Explore Our Tools
       </a>
 
-      <button
-        type="button"
-        disabled
-        aria-disabled="true"
-        className="mx-2 px-6 py-3 rounded-md font-semibold text-white bg-black/40 opacity-50 cursor-not-allowed transition-all duration-200 shadow-inner pointer-events-none"
-      >
-        Explore Our Games
-        <span className="ml-2 select-none">🚫</span>
-      </button>
+      <div className="relative group mx-2">
+        <button
+          type="button"
+          disabled
+          aria-disabled="true"
+          className="px-6 py-3 rounded-md font-semibold text-white bg-black/40 opacity-50 cursor-not-allowed transition-all duration-200 shadow-inner pointer-events-none"
+        >
+          Explore Our Games
+          <span className="ml-2 select-none">🚫</span>
+        </button>
+        <div className="absolute left-1/2 top-full mt-2 w-64 -translate-x-1/2 scale-95 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 z-50 bg-bg-100 text-sm text-text-secondary p-3 rounded-md shadow-lg border border-border">
+          Our game projects are currently in development and will be announced
+          soon!
+        </div>
+      </div>
     </div>
   </section>
 );
