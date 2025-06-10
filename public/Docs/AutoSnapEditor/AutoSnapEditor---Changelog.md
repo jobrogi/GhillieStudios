@@ -4,6 +4,14 @@ This document outlines all major changes and additions to the AutoSnap – Edito
 
 <div style="margin-top: 2rem;"></div>
 
+## [1.0.1] – Documentation Standardization
+
+### Updates
+
+- Updated docs to a standardized template
+
+<div style="margin-top: 2rem;"></div>
+
 ## [1.0.0] – Initial Release
 
 ### Features
