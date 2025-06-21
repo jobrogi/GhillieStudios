@@ -80,10 +80,13 @@ const Navbar = () => {
             <button
               key={id}
               onClick={() => {
-                // Force full reload with correct subpath + anchor
-                window.location.href = `${window.location.origin}${
-                  import.meta.env.BASE_URL
-                }#${id}`;
+                if (location.hash === `#${id}`) {
+                  // If already on same hash, just scroll
+                  scrollToSection(id);
+                } else {
+                  // Change hash without reloading
+                  window.location.hash = id;
+                }
               }}
               className={`relative group hover:cursor-pointer ${
                 !isDocsPage && activeSection === id
