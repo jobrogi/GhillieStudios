@@ -11,7 +11,7 @@ const App = () => {
   const isDocs = location.pathname.startsWith("/docs");
 
   return (
-    <div className="bg-bg-100 text-text-primary scroll-smooth">
+    <div className="bg-bg-100 text-text-primary scroll-smooth overflow-x-hidden">
       {/* Show Navbar always, or conditionally based on `isDocs` if needed */}
       <Navbar />
 

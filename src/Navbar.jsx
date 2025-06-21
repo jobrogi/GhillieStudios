@@ -7,9 +7,9 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
   const isDocsPage = location.pathname.startsWith("/docs");
 
-  // Scroll tracking
   useEffect(() => {
     if (isDocsPage) return;
 
@@ -33,21 +33,22 @@ const Navbar = () => {
     return () => observer.disconnect();
   }, [isDocsPage]);
 
-  // Smooth scroll to anchor
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleSectionClick = (id) => {
+    setMenuOpen(false);
     if (location.pathname === "/") {
       scrollToSection(id);
+      window.history.replaceState(null, "", `#${id}`);
     } else {
       navigate("/", { replace: false });
-      // Wait until next frame to ensure DOM is mounted
-      setTimeout(() => scrollToSection(id), 100);
+      setTimeout(() => {
+        window.history.replaceState(null, "", `#${id}`);
+        scrollToSection(id);
+      }, 100);
     }
   };
 
@@ -59,7 +60,7 @@ const Navbar = () => {
           v{__APP_VERSION__}
         </span>
 
-        {/* Logo + Studio Name */}
+        {/* Logo + Name */}
         <Link
           to="/"
           className="flex flex-col items-center justify-center group"
@@ -69,25 +70,45 @@ const Navbar = () => {
             alt="Ghillie Studios Logo"
             className="w-10 h-10 object-contain mb-1 transition duration-300 group-hover:brightness-110"
           />
-          <span className="text-xs -m-2 font-extrabold tracking-wide text-text-primary group-hover:text-accent-300 uppercase">
+          <span className="text-[0.6rem] [@media(max-width:393px)]:text-[0.5rem] sm:text-xs -m-2 font-extrabold tracking-wide text-text-primary group-hover:text-accent-300 uppercase">
             Ghillie Studios
           </span>
         </Link>
 
-        {/* Nav Links */}
-        <nav className="flex space-x-6 text-sm font-medium items-center">
+        {/* Hamburger toggle (only visible below md) */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-text-primary focus:outline-none"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            {menuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex space-x-6 text-sm font-medium items-center">
           {sections.map((id) => (
             <button
               key={id}
-              onClick={() => {
-                if (location.hash === `#${id}`) {
-                  // If already on same hash, just scroll
-                  scrollToSection(id);
-                } else {
-                  // Change hash without reloading
-                  window.location.hash = id;
-                }
-              }}
+              onClick={() => handleSectionClick(id)}
               className={`relative group hover:cursor-pointer ${
                 !isDocsPage && activeSection === id
                   ? "text-accent-300"
@@ -106,14 +127,14 @@ const Navbar = () => {
           ))}
 
           {/* Divider */}
-          <div className="w-px h-5 bg-border opacity-60 -ml-2" />
+          <div className="w-px h-5 bg-border opacity-60 -ml-2 hidden md:block" />
 
-          {/* Docs Button */}
+          {/* Docs Link */}
           <Link
             to="/docs/md/Docs---Overview"
             className={`relative group ${
               isDocsPage ? "text-accent-300" : "text-text-secondary"
-            } hover:text-accent-300 transition-colors duration-300 ease-snappy`}
+            } hover:text-accent-300 transition-colors duration-300 ease-snappy hidden md:inline-flex`}
           >
             Docs
             <span
@@ -126,6 +147,21 @@ const Navbar = () => {
           </Link>
         </nav>
       </div>
+
+      {/* Mobile Nav Menu */}
+      {menuOpen && (
+        <div className="md:hidden px-6 pb-4 pt-2 bg-bg-100 border-t border-border flex flex-col space-y-3 text-sm">
+          {sections.map((id) => (
+            <button
+              key={id}
+              onClick={() => handleSectionClick(id)}
+              className="text-text-primary hover:text-accent-300 text-left"
+            >
+              {id.charAt(0).toUpperCase() + id.slice(1)}
+            </button>
+          ))}
+        </div>
+      )}
     </header>
   );
 };
