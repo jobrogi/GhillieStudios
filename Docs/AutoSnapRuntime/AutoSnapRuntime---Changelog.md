@@ -44,14 +44,14 @@ Track all major updates and improvements to the AutoSnap – Runtime plugin.
 
 ## [1.0.1] – Hotfixes + Bugs
 
-### Updates
+#### Updates
 
 - Fixed Content folders not generating
 - Fixed `AutoSnapControllerComponent` crashing engine if it is added to anything other than a character class.
 
 ## [1.0.0] – Initial Release
 
-### Features
+#### Features
 
 - Runtime snapping system using `AutoSnapControllerComponent`
 - World-aligned grid with dynamic actor-following behavior
@@ -65,7 +65,7 @@ Track all major updates and improvements to the AutoSnap – Runtime plugin.
 - Designed for Unreal Engine Enhanced Input
 - Fully compatible with packaged builds
 
-### Modular Components
+#### Modular Components
 
 - `ARuntimeGizmoActor`: Handles snapping and visual drag logic
 - `AGridVisualizerActor`: Projects world-space grid visuals
