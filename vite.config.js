@@ -4,7 +4,7 @@ import pkg from "./package.json";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  base: "/GhillieStudios/", // must match GitHub Pages repo name
+  base: "/GhillieStudios/",
   plugins: [react(), tailwindcss()],
   define: {
     __APP_VERSION__: JSON.stringify(pkg.version),

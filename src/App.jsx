@@ -12,16 +12,13 @@ const App = () => {
 
   return (
     <div className="bg-bg-100 text-text-primary scroll-smooth overflow-x-hidden">
-      {/* Show Navbar always, or conditionally based on `isDocs` if needed */}
       <Navbar />
 
       <Routes>
-        {/* Nested docs routes */}
         <Route path="/docs" element={<Documentation />}>
           <Route index element={<MarkdownPage slug="Overview" />} />
           <Route path="md/:slug" element={<MarkdownPage />} />
           <Route path=":slug" element={<MarkdownPage />} />{" "}
-          {/* <--- Add this line */}
         </Route>
 
         {/* Main single-page layout */}

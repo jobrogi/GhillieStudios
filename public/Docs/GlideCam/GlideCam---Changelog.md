@@ -4,9 +4,21 @@ This document outlines all major changes and additions to the GlideCam plugin.
 
 <div style="margin-top: 2rem;"></div>
 
+## [1.0.2] – Documentation Standardization
+
+#### QoL Updates
+
+- Updated Plugin Example Map
+- Fixed Rotation (Not Snapping Rotation Just Regular Rotation)
+- Adjusted Plugin Content To (Project Root -> Plugins -> Ghillie Studios -> GlideCam)
+- Updated Product page with changelogs + New Links to new docs website.
+- Updated Uplugin File to correct Docs website
+
+<div style="margin-top: 2rem;"></div>
+
 ## [1.0.1] – Documentation Standardization
 
-### Updates
+#### Updates
 
 - Updated docs to a standardized template
 
@@ -14,7 +26,7 @@ This document outlines all major changes and additions to the GlideCam plugin.
 
 ## [1.0.0] – Initial Release
 
-### Features
+#### Features
 
 - Lightweight RTS-style camera system built entirely in Blueprints
 - Smooth movement with spring arm and glide-style acceleration
@@ -26,7 +38,7 @@ This document outlines all major changes and additions to the GlideCam plugin.
 - Works with both click-to-move and strategy camera layouts
 - Fully extendable in Blueprints
 
-### Included Blueprints
+#### Included Blueprints
 
 - `BP_GlideCamPawn` – Main camera pawn with spring arm and camera component
 - `BP_GlideCamController` – Controller class with Enhanced Input mapping and logic

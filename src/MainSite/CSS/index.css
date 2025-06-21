@@ -5,9 +5,7 @@
   --breakpoint-3xl: 120rem;
 
   /* Base Backgrounds */
-  --color-bg-100: oklch(
-    0.15 0 0
-  ); /* #1e1e1e - Deep Charcoal (main background) */
+  --color-bg-100: oklch(0.15 0 0);
   --color-bg-200: oklch(0.25 0 0); /* #333333 - Soft Black */
   --color-bg-300: oklch(0.45 0 0); /* #666666 - Light Gray Panel */
 
@@ -93,7 +91,6 @@
   font-size: 0.95rem;
 }
 
-/* === Inline Code (`like this`) === */
 .prose code {
   background-color: oklch(0.4 0 0); /* dark gray chip */
   color: oklch(0.95 0 0); /* bright white */
@@ -103,7 +100,6 @@
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
-/* Remove backticks */
 .prose code::before,
 .prose code::after {
   content: "";
