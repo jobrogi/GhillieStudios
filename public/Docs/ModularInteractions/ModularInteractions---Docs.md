@@ -22,6 +22,18 @@ Follow these steps to get up and running quickly:
    - Use `AInteractableActorBase` for interactive objects or `AInteractionRelayActor` to trigger others remotely.
    - Choose a `WidgetType` and `ActionType` per actor and assign optional widgets, icons, and toggle targets.
 
+## Using Plugin Content
+
+1. **Navigate to Plugin Content**
+
+- Navigate to `All->Engine->Plugins->Modular Interactions Content`
+
+1. **Explore and use content**
+
+- Check out the Showcase Level in `Levels->L_Basic` To see the interactions map.
+- Make sure `BP_ThirdPersonGamemode` is the Gamemode override. (Preferably the one that ships with the plugin!)
+- Find the Third Person Character BP Shipped with plugin in `BPs->ThirdPerson->Blueprints`
+- **NOTE** The Third Person Character shipped with the game is NOT needed to showcase. If you want to use your character please just add the `BP_InteractionHandlerComponent` to your main character class! Feel free to delete Plugins Third Person BPs if you do not need it!
 <div style="margin-top: 2rem;"></div>
 
 ## Features Overview
@@ -42,12 +54,12 @@ Follow these steps to get up and running quickly:
 
 ## Included Files
 
-| File/Folder Path                              | Description                                          |
-| --------------------------------------------- | ---------------------------------------------------- |
-| `/Plugins/ModularInteractions/Source/`        | All core logic and components                        |
-| `/Plugins/ModularInteractions/Blueprints/`    | `InteractableActorBase`, `InteractionRelayActor`, UI |
-| `/Plugins/ModularInteractions/Input/`         | Input Action and Context assets                      |
-| `/Plugins/ModularInteractions/EditorWidgets/` | Optional preview utilities                           |
+| File/Folder Path                                                 | Description                                          |
+| ---------------------------------------------------------------- | ---------------------------------------------------- |
+| `[ProjectRoot]Engine/Plugins/ModularInteractions/Source/`        | All core logic and components                        |
+| `[ProjectRoot]Engine/Plugins/ModularInteractions/Blueprints/`    | `InteractableActorBase`, `InteractionRelayActor`, UI |
+| `[ProjectRoot]Engine/Plugins/ModularInteractions/Input/`         | Input Action and Context assets                      |
+| `[ProjectRoot]Engine/Plugins/ModularInteractions/EditorWidgets/` | Optional preview utilities                           |
 
 <div style="margin-top: 2rem;"></div>
 
@@ -72,12 +84,12 @@ Follow these steps to get up and running quickly:
 
 ## Engine Compatibility
 
-| Unreal Engine Version | Supported                |
-| --------------------- | ------------------------ |
-| 5.3                   | ✅                       |
-| 5.4                   | ✅                       |
-| 5.5                   | ✅                       |
-| 5.6+                  | ⚠️ Not officially tested |
+| Unreal Engine Version | Supported |
+| --------------------- | --------- |
+| 5.3                   | ✅        |
+| 5.4                   | ✅        |
+| 5.5                   | ✅        |
+| 5.6+                  | ✅        |
 
 <div style="margin-top: 2rem;"></div>
 

@@ -4,9 +4,20 @@ This document outlines major updates and improvements for the Modular Interactio
 
 <div style="margin-top: 2rem;"></div>
 
+## [1.0.2] – Bug Fixes + 5.6
+
+#### Updates
+
+- Added 5.6 Support
+- Fixed Map problems
+- Fixed Third Person Character Problems
+- Updated Docs
+
+<div style="margin-top: 2rem;"></div>
+
 ## [1.0.1] – Documentation Standardization
 
-### Updates
+#### Updates
 
 - Updated docs to a standardized template
 
@@ -14,7 +25,7 @@ This document outlines major updates and improvements for the Modular Interactio
 
 ## [1.0.0] – Initial Release
 
-### Features
+#### Features
 
 - Modular base actor with fully dynamic interaction setup
 - Supports interaction prompts:
@@ -33,7 +44,7 @@ This document outlines major updates and improvements for the Modular Interactio
 - Works with C++ and Blueprint projects
 - Clean struct-based configuration (`FTypeSettings`, `FWidgetActionSettings`, etc.)
 
-### Components Included
+#### Components Included
 
 - `AInteractableActorBase` – Parent class with all logic
 - `AInteractionWidgetActor` – Child actor that displays 3D UI prompts
