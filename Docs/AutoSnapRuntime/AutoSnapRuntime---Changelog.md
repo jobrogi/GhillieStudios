@@ -4,11 +4,18 @@ Track all major updates and improvements to the AutoSnap – Runtime plugin.
 
 <div style="margin-top: 2rem;"></div>
 
+## [1.0.4] – QoL Feature Added
+
+#### Updates
+
+- Added a plugin button that will automatically navigate to plugin folders at ``
+
+<div style="margin-top: 2rem;"></div>
+
 ## [1.0.3] – QoL + Added Settings & Bonus Features
 
 #### Updates
 
-- Adjusted Plugin files to show in Root Folder. Plugin Files are now in [ProjectFolder] -> Plugins -> Ghillie Studios -> AutoSnap Runtime
 - Added New Setting `Enable Gizmo Align with Camera` Which will rotate the Gizmo at 90 Degree Steps based off the Camera's Rotation.
 - Added New Settings `Snap Actor on Select` Which will snap the actor to the closest grid point on select. This gets rid of the Axis Colored Dashed Lines Bug (If bool is selected)
 - Fixed Input Mapping Context Bug that flip flops the Horizontal and Vertical Movement inputs.
