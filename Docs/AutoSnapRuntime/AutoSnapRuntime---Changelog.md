@@ -4,12 +4,18 @@ Track all major updates and improvements to the AutoSnap – Runtime plugin.
 
 <div style="margin-top: 2rem;"></div>
 
-## [1.0.4] – QoL Feature Added
+## [1.0.4] – QoL + Bug Fixes
 
 #### Updates
 
-- Added a plugin button that will automatically navigate to plugin folders at ``
-
+- Added a editor navigation button that will automatically navigate to the AutoSnapRuntime Plugin folder. (No more searching around for it!) Please see docs for more info!
+- Added a Editor module to the plugin. This was needed for the editor navigation button.
+- Adjusted .uplugin values.
+- Adjusted Gizmo + Made Gizmo Materials Two sided (So you can see the Gizmo Planes from behind)
+- Added New Setting `Default Grid Plane` Which allows you to select a default fallback grid plane.
+- Fixed Setting `Debug Mouse Trace` (type bool). Will now show persistent Line traces on clicks. It will also Log useful information about the trace in the console log.
+- Fixed a bug that allows you to select another selectable object while trying to select a gizmo actor handle.
+- Fixed a bug that wont let you select gizmo components if they are within a dragable actor object.
 <div style="margin-top: 2rem;"></div>
 
 ## [1.0.3] – QoL + Added Settings & Bonus Features

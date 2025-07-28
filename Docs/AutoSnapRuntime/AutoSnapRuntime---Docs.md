@@ -20,6 +20,22 @@ Follow these steps to get up and running quickly:
 - Enable the plugin under **Edit > Plugins > AutoSnap – Runtime**, then restart the editor.
 - Add the `AutoSnapControllerComponent` to your player character or controller Blueprint.
 
+#### Getting to plugin content
+
+Recently we just added an easier way to access our content. These are the steps to getting to our content after this new update!
+
+Step 1: After installing AutoSnapRuntime go to the main editor then at the toolbar at the top go to `Window -> Open AutoSnapRuntime Contents`
+<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/UE5Editor_Window.png" 
+        alt="Unreal Engine Window View" 
+        width="600" 
+        style="margin-top: 1rem;" />
+
+Step 2: Pressing that button will open the content drawer where the AutoSnapRuntime Plugin content lies!
+<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/UE5Editor_Content.png" 
+        alt="Unreal Engine Window View" 
+        width="600" 
+        style="margin-top: 1rem;" />
+
 #### Using the Plugin
 
 The `AutoSnapControllerComponent` is designed **exclusively for Character classes**.  
@@ -69,14 +85,14 @@ To limit snapping to specific actors, enable **“Require Actor Tag”** in the 
 
 #### Included Files
 
-| File/Folder Path                                           | Description                                            |
-| ---------------------------------------------------------- | ------------------------------------------------------ |
-| `[ProjectRoot]/Engine/Plugins/AutoSnap/Content/BPs/`       | Blueprint classes like `BP_Gizmo`, `BP_GridVisualizer` |
-| `[ProjectRoot]/Engine/Plugins/AutoSnap/Content/Input/`     | Input assets such as `IMC_AutoSnap`, `IA_LeftClick`    |
-| `[ProjectRoot]/Engine/Plugins/AutoSnap/Content/Maps/`      | Demo or debug maps related to runtime snapping         |
-| `[ProjectRoot]/Engine/Plugins/AutoSnap/Content/Materials/` | Materials used by gizmos or visual helpers             |
-| `[ProjectRoot]/Engine/Plugins/AutoSnap/Content/SM/`        | Static meshes for gizmos or grid visuals               |
-| `[ProjectRoot]/Engine/Plugins/AutoSnapRuntime/Components/` | C++ class `AutoSnapControllerComponent` and core logic |
+| File/Folder Path                                                  | Description                                            |
+| ----------------------------------------------------------------- | ------------------------------------------------------ |
+| `[ProjectRoot]/Engine/Plugins/AutoSnapRuntime/Content/BPs/`       | Blueprint classes like `BP_Gizmo`, `BP_GridVisualizer` |
+| `[ProjectRoot]/Engine/Plugins/AutoSnapRuntime/Content/Input/`     | Input assets such as `IMC_AutoSnap`, `IA_LeftClick`    |
+| `[ProjectRoot]/Engine/Plugins/AutoSnapRuntime/Content/Maps/`      | Demo or debug maps related to runtime snapping         |
+| `[ProjectRoot]/Engine/Plugins/AutoSnapRuntime/Content/Materials/` | Materials used by gizmos or visual helpers             |
+| `[ProjectRoot]/Engine/Plugins/AutoSnapRuntime/Content/SM/`        | Static meshes for gizmos or grid visuals               |
+| `[ProjectRoot]/Engine/Plugins/AutoSnapRuntime/Components/`        | C++ class `AutoSnapControllerComponent` and core logic |
 
 <div style="margin-top: 2rem;"></div>
 
@@ -96,6 +112,7 @@ To limit snapping to specific actors, enable **“Require Actor Tag”** in the 
 | `GizmoOffset`             | AutoSnapControllerComponent (Details) | Positional offset applied to the runtime gizmo.                   |
 | `GizmoScale`              | AutoSnapControllerComponent (Details) | Uniform scale applied to the runtime gizmo actor.                 |
 | `GridVisualizerClass`     | AutoSnapControllerComponent (Details) | Visual class used to represent the snapping grid at runtime.      |
+| `Default Grid Plane `     | AutoSnapControllerComponent (Details) | Sets a default fallback plane + initial grid plane                |
 | `AxisColors`              | AutoSnapControllerComponent (Details) | Optional color overrides for visualizing each axis.               |
 | `InputMapping`            | AutoSnapControllerComponent (Details) | Mapping context defining the input schema for snapping logic.     |
 | `SelectAction`            | AutoSnapControllerComponent (Details) | Input action used to trigger selection or interaction.            |
