@@ -10,7 +10,7 @@ After purchasing a Ghillie Studios product:
 
 1. Launch the **Epic Games Launcher**.
 2. In the top navigation bar, click on **Library**.
-   <img src="/GhillieStudios/Docs/DocsImages/EpicLauncher_Library.png" width="600" style="margin-top: 1rem;" />
+   <img src="/GhillieStudios/Docs/DocsImages/EpicLauncher_Library.png" alt="Epic Launcher" width="600" style="margin-top: 1rem;" />
 
 ## Step 2: Locate the Fab Product
 
