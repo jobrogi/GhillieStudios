@@ -16,6 +16,10 @@ Track all major updates and improvements to the AutoSnap – Runtime plugin.
 - Fixed Setting `Debug Mouse Trace` (type bool). Will now show persistent Line traces on clicks. It will also Log useful information about the trace in the console log.
 - Fixed a bug that allows you to select another selectable object while trying to select a gizmo actor handle.
 - Fixed a bug that wont let you select gizmo components if they are within a dragable actor object.
+  - Added a two Trace System to solve this problem. Also Updated traces to use Multi Sphere tracing rather than a single line trace. One Trace searches for Gizmo and the other searches for the actors.
+- Added zooming to the camera controller.
+- Depreciated `Flip Flop` Blueprint Events in `ARuntimeGizmoActor` class.
+- Updated `L_ExampleLevel` Map
 <div style="margin-top: 2rem;"></div>
 
 ## [1.0.3] – QoL + Added Settings & Bonus Features
