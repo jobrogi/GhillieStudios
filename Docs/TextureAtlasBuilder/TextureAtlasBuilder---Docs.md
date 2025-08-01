@@ -44,14 +44,18 @@ Once the Atlas Builder asset is set up:
   <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
     <li>All source textures exactly match the selected <strong>Tile Size</strong>.</li>
     <li>Each texture uses a compatible compression setting, such as <code>UserInterface2D (RGBA)</code>.</li>
+    <li>The <strong>Mip Gen Settings</strong> for each texture are set to <code>NoMipmaps</code>.</li>
   </ul>
-  This ensures the final atlas displays correctly without color or alpha issues.
+  This ensures the final atlas builds correctly without corruption, color mismatches, or transparency issues.
   Below is what the settings look like if you open up the texture.
-<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/UE5Editor_TextureCompressionSettings.png" 
-               alt="Epic Games Launcher Library View" 
-               width="600" 
-               style="margin-top: 1rem;" />
-
+  <img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/UE5Editor_TextureCompressionSettings.png" 
+       alt="UE5 Texture Compression Settings" 
+       width="600" 
+       style="margin-top: 1rem;" />
+ <img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/UE5Editor_TextureAtlasMipMapsSettings.png" 
+       alt="UE5 Texture Compression Settings" 
+       width="600" 
+       style="margin-top: 1rem;" />
 </div>
 
 <div style="margin-top: 2rem;"></div>
