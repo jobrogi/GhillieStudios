@@ -1,6 +1,6 @@
-# AutoSnap – Runtime Changelog
+# AutoSnapRuntime Changelog
 
-Track all major updates and improvements to the AutoSnap – Runtime plugin.
+Track all major updates and improvements to the AutoSnapRuntime plugin.
 
 <div style="margin-top: 2rem;"></div>
 
