@@ -41,27 +41,24 @@ Once the Atlas Builder asset is set up:
 
 #### Features Overview
 
-| Feature              | Description                                                                 |
-| -------------------- | --------------------------------------------------------------------------- |
-| Auto Texture Packing | Automatically scans folders and packs 16x16 textures into a single atlas    |
-| Tile Indexing System | Each tile receives a consistent index used for UV lookup or tile reference  |
-| Resolution Filtering | Only compatible texture sizes are included, avoiding mismatched assets      |
-| Raw Pixel Access     | Atlas is built using `FColor` pixel data and supports precise pixel control |
-| Editor-Only Workflow | Designed to run during editor sessions only, avoiding runtime cost          |
-| UV Lookup Functions  | Easily get UV bounds or tile index by name or index                         |
-| Minimal Footprint    | No rendering hacks, no runtime hooks, no heavy asset dependencies           |
+| Feature              | Description                                                                     |
+| -------------------- | ------------------------------------------------------------------------------- |
+| Auto Texture Packing | Automatically scans folders and packs Custom sized textures into a single atlas |
+| Tile Indexing System | Each tile receives a consistent index used for UV lookup or tile reference      |
+| Resolution Filtering | Only compatible texture sizes are included, avoiding mismatched assets          |
+| Raw Pixel Access     | Atlas is built using `FColor` pixel data and supports precise pixel control     |
+| Editor-Only Workflow | Designed to run during editor sessions only, avoiding runtime cost              |
+| UV Lookup Functions  | Easily get UV bounds or tile index by name or index                             |
+| Minimal Footprint    | No rendering hacks, no runtime hooks, no heavy asset dependencies               |
 
 <div style="margin-top: 2rem;"></div>
 
 #### Included Files
 
-| File/Folder Path                                                       | Description                                        |
-| ---------------------------------------------------------------------- | -------------------------------------------------- |
-| `[ProjectRoot]/Plugins/TextureAtlasBuilder/Content/`                   | Optional materials for previewing tile lookups     |
-| `[ProjectRoot]/Plugins/TextureAtlasBuilder/Source/AtlasBuilder/`       | Core editor module source code                     |
-| `[ProjectRoot]/Plugins/TextureAtlasBuilder/Source/AtlasBuilderEditor/` | Editor-only logic and asset customization          |
-| `[ProjectRoot]/Plugins/TextureAtlasBuilder/Public/UAtlasBuilder.h`     | UDataAsset class for atlas configuration and usage |
-| `[ProjectRoot]/Plugins/TextureAtlasBuilder/Private/`                   | Pixel sampling and atlas generation implementation |
+| File/Folder Path                                  | Description                                                                  |
+| ------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `TextureAtlasBuilder/Source/AtlasBuilder/`        | Responsible for creating and managing TextureAtlas's                         |
+| `TextureAtlasBuilder/Source/TextureAtlasBuilder/` | Responsible for displaying window tool and communicating with `AtlasBuilder` |
 
 <div style="margin-top: 2rem;"></div>
 
@@ -93,7 +90,7 @@ Once the Atlas Builder asset is set up:
 #### Notes
 
 - Only textures that are square and match the configured `TileSize` are included in the atlas.
-- Rebuilding the atlas will overwrite the existing `AtlasTexture` asset with updated content.
+- Rebuilding the atlas will overwrite the existing `AtlasTexture` asset with updated content Unless you change the texture name beforehand.
 - For dynamic texture use in-game, export the UV bounds and tile indices for use in your systems.
 
 <div style="margin-top: 2rem;"></div>
