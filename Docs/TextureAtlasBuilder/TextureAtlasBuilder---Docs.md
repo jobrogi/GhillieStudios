@@ -39,6 +39,23 @@ Once the Atlas Builder asset is set up:
 
 <div style="margin-top: 2rem;"></div>
 
+<div style="border-left: 5px solid #ff0000; padding: 1rem; margin-top: 1rem;">
+  <strong>⚠️ Important:</strong> Before building an atlas, make sure that:
+  <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+    <li>All source textures exactly match the selected <strong>Tile Size</strong>.</li>
+    <li>Each texture uses a compatible compression setting, such as <code>UserInterface2D (RGBA)</code>.</li>
+  </ul>
+  This ensures the final atlas displays correctly without color or alpha issues.
+  Below is what the settings look like if you open up the texture.
+<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/UE5Editor_TextureCompressionSettings.png" 
+               alt="Epic Games Launcher Library View" 
+               width="600" 
+               style="margin-top: 1rem;" />
+
+</div>
+
+<div style="margin-top: 2rem;"></div>
+
 #### Features Overview
 
 | Feature              | Description                                                                     |
