@@ -15,7 +15,7 @@ Follow these steps to get up and running quickly:
 
 - [Installation Guide](/docs/md/Docs---Installation)
 
-### Finding the Tool
+#### Finding the Tool
 
 1. Ensure Plugin is fully installed and editor has been restarted
 2. In the Main Unreal Engine 5 Editor, Go to the top Toolbar. `Window-> Open TextureAtlasBuilder`
