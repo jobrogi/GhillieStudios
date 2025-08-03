@@ -64,6 +64,15 @@ Follow these steps to get up and running quickly:
 
 <div style="margin-top: 2rem;"></div>
 
+#### BP Example Content:
+
+Here we loop through an array of Text Render components and set the texts according to our randomly generated names!
+
+<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample.png" 
+        alt="Epic Games Launcher Library View" 
+        width="600" 
+        style="margin-top: 1rem;" />
+
 #### Engine Compatibility
 
 | Unreal Engine Version | Supported |
