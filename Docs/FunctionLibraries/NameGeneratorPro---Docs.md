@@ -46,6 +46,24 @@ Follow these steps to get up and running quickly:
 
 <div style="margin-top: 2rem;"></div>
 
+#### Categories
+
+| Category             | Description                                                      | Total Names |
+| -------------------- | ---------------------------------------------------------------- | ----------- |
+| **HumanModern**      | Realistic modern names with single-word cores only.              | 506         |
+| **HumanTraditional** | Classic English-style names using common prefixes and suffixes.  | 2,000       |
+| **RobotDroid**       | Droid/robot-style codes with letter-number combinations.         | 9,984       |
+| **Fantasy**          | Mythical and magical names combining rich syllables and endings. | 14,079      |
+| **Orcish**           | Harsh, guttural names suited for tribal orc characters.          | 567         |
+| **Dwarven**          | Stout and rugged names with traditional dwarven structure.       | 567         |
+| **Elven**            | Elegant and melodic names using flowing Elvish-style syllables.  | 567         |
+
+<div style="margin-top: 2rem;"></div>
+
+<blockquote>Tip: You can expand any of these categories or create entirely new ones by adding Prefixes, Core Syllables, or Suffixes using the Blueprint functions listed above, such as AddPrefixToCategory, AddCoreSyllableToCategory, or AddCustomNameCategory.</blockquote>
+
+<div style="margin-top: 2rem;"></div>
+
 #### Engine Compatibility
 
 | Unreal Engine Version | Supported |
