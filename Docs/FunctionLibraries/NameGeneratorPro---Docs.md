@@ -76,19 +76,7 @@ Here we loop through an array of Text Render components and set the texts accord
 
 <!-- Note to self, find a way to have images get enlarged POST BUILD AND DEPLOY -->
 
-<a
-href="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample.png"
-target="\_blank"
-
-> <img
-
-    src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample.png"
-    alt="Blueprint example of NameGenPro"
-    width="600"
-    style="margin-top: 1rem; border: 1px solid #ccc; border-radius: 4px;"
-
-/>
-</a>
+![Blueprint example of NameGenPro](https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample.png)
 
 <div style="margin-top: 1rem;"></div>
 Here We Use the new <div className="font-bold">
@@ -102,17 +90,8 @@ category!
 Here is an example of the names that can be generated. Some are procedural which
 means it can lead to some funky results! But There are plenty of realistic names
 in the pack! These are a VERY small fraction of the actual amount of names!
-<a
-  href="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProResults.png"
-  target="_blank"
->
-  <img
-    src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProResults.png"
-    alt="Blueprint example of NameGenPro"
-    width="600"
-    style="margin-top: 1rem; border: 1px solid #ccc; border-radius: 4px;"
-  />
-</a>
+
+![Blueprint example of NameGenPro](https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProResults.png)
 
 #### Engine Compatibility
 
