@@ -43,6 +43,7 @@ Follow these steps to get up and running quickly:
 | `RemoveSuffixFromCategory(Category, Suffix)`                 | Removes a suffix from the specified category.                              |
 | `RemoveNameCategory(Category)`                               | Deletes the entire category from the name system.                          |
 | `ResetAllNameCategoriesToDefaults()`                         | Clears all changes and restores the original built-in categories.          |
+| `GenerateNameFromRandomCategory()`                           | Randomly Generates a name from a random category. Great for Arrays.        |
 
 <div style="margin-top: 2rem;"></div>
 
@@ -67,11 +68,9 @@ Follow these steps to get up and running quickly:
 #### BP Example Content:
 
 Here we loop through an array of Text Render components and set the texts according to our randomly generated names!
-
-<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample.png" 
-        alt="Epic Games Launcher Library View" 
-        width="600" 
-        style="margin-top: 1rem;" />
+<a href="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample.png" target="_blank">
+<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample.png" alt="Blueprint example of NameGenPro" width="600" style="margin-top: 1rem; border: 1px solid #ccc; border-radius: 4px;" />
+</a>
 
 #### Engine Compatibility
 
