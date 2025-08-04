@@ -61,7 +61,12 @@ Follow these steps to get up and running quickly:
 
 <div style="margin-top: 2rem;"></div>
 
-<blockquote>Tip: You can expand any of these categories or create entirely new ones by adding Prefixes, Core Syllables, or Suffixes using the Blueprint functions listed above, such as AddPrefixToCategory, AddCoreSyllableToCategory, or AddCustomNameCategory.</blockquote>
+<blockquote>
+  Tip: You can expand any of these categories or create entirely new ones by
+  adding Prefixes, Core Syllables, or Suffixes using the Blueprint functions
+  listed above, such as AddPrefixToCategory, AddCoreSyllableToCategory, or
+  AddCustomNameCategory.
+</blockquote>
 
 <div style="margin-top: 2rem;"></div>
 
@@ -70,20 +75,43 @@ Follow these steps to get up and running quickly:
 Here we loop through an array of Text Render components and set the texts according to our randomly generated names!
 
 <!-- Note to self, find a way to have images get enlarged POST BUILD AND DEPLOY -->
-<a href="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample.png" target="_blank">
-<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample.png" alt="Blueprint example of NameGenPro" width="600" style="margin-top: 1rem; border: 1px solid #ccc; border-radius: 4px;" />
+
+<a
+href="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample.png"
+target="\_blank"
+
+> <img
+
+    src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample.png"
+    alt="Blueprint example of NameGenPro"
+    width="600"
+    style="margin-top: 1rem; border: 1px solid #ccc; border-radius: 4px;"
+
+/>
 </a>
 
 <div style="margin-top: 1rem;"></div>
-Here We Use the new <div className="font-bold">GenerateNameFromRandomCategory</div> to loop through the text and randomly pull names from each and every category!
-<a href="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample2.png" target="_blank">
-<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample2.png" alt="Blueprint example of NameGenPro" width="600" style="margin-top: 1rem; border: 1px solid #ccc; border-radius: 4px;" />
-</a>
+Here We Use the new <div className="font-bold">
+  GenerateNameFromRandomCategory
+</div> to loop through the text and randomly pull names from each and every
+category!
+
+![Blueprint example of NameGenPro](https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample2.png)
 
 <div style="margin-top: 1rem;"></div>
-Here is an example of the names that can be generated. Some are procedural which means it can lead to some funky results! But There are plenty of realistic names in the pack! These are a VERY small fraction of the actual amount of names! 
-<a href="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProResults.png" target="_blank">
-<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProResults.png" alt="Blueprint example of NameGenPro" width="600" style="margin-top: 1rem; border: 1px solid #ccc; border-radius: 4px;" />
+Here is an example of the names that can be generated. Some are procedural which
+means it can lead to some funky results! But There are plenty of realistic names
+in the pack! These are a VERY small fraction of the actual amount of names!
+<a
+  href="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProResults.png"
+  target="_blank"
+>
+  <img
+    src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProResults.png"
+    alt="Blueprint example of NameGenPro"
+    width="600"
+    style="margin-top: 1rem; border: 1px solid #ccc; border-radius: 4px;"
+  />
 </a>
 
 #### Engine Compatibility
@@ -101,29 +129,43 @@ Here is an example of the names that can be generated. Some are procedural which
 
 <ul>
   <li>
-     <strong>Email:</strong> <code>Jobrogi@gmail.com</code><br />
+    <strong>Email:</strong> <code>Jobrogi@gmail.com</code>
+    <br />
     <small>Copy and paste into your email client</small>
   </li>
   <li>
-     <strong>Discord:</strong>
-    <a href="https://discord.gg/AFVyqXBSRW" target="_blank" rel="noopener noreferrer">
+    <strong>Discord:</strong>
+    <a
+      href="https://discord.gg/AFVyqXBSRW"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Join our community
     </a>
   </li>
   <li>
-     <strong>Main Docs:</strong>
-    <a href="https://jobrogi.github.io/GhillieStudios" target="_blank" rel="noopener noreferrer">
+    <strong>Main Docs:</strong>
+    <a
+      href="https://jobrogi.github.io/GhillieStudios"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Ghillie Studios Website
     </a>
   </li>
   <li>
-     <strong>Fab Store:</strong>
-    <a href="https://www.fab.com/sellers/Ghillie%20Studios" target="_blank" rel="noopener noreferrer">
+    <strong>Fab Store:</strong>
+    <a
+      href="https://www.fab.com/sellers/Ghillie%20Studios"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Ghillie Studios on Fab
     </a>
   </li>
 </ul>
 
 <blockquote>
-  Built by Ghillie Studios. All plugins support Unreal Engine 5.3–5.5 unless otherwise noted.
+  Built by Ghillie Studios. All plugins support Unreal Engine 5.3–5.5 unless
+  otherwise noted.
 </blockquote>

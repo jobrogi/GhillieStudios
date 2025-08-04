@@ -10,9 +10,9 @@ We plan on showcasing even the technical side of our project. We are currently h
 
 <div style="margin-top: 2rem;"s></div>
 
-<!--## [0.0.2] – Voxel Terrain Refactoring! <span class="tag">08/03/2025</span>
+[0.0.2] – Voxel Terrain Refactoring! <span class="tag">08/03/2025</span>
 
- Hey Folks! Welcome to another week of Steadborn Development! This week we focused heavy on refactoring code in our terrain generation systems. Before we used a simple noise mask to dictate where Biomes were, Then we looked into our data asset class to definie the shape of that biome. Now there is so "Official Way" to make terrain especially with voxels BUT... IF THERE WERE, it would be how the infamouse game `Minecraft` generates terrain. We have been doing a lot of studying on this topic and decided to not entirely destroy our voxel system but revamp it to work a lot more like Minecraft's Voxel System. Here are the details and changes on that!
+Hey Folks! Welcome to another week of Steadborn Development! This week we focused heavy on refactoring code in our terrain generation systems. Before we used a simple noise mask to dictate where Biomes were, Then we looked into our data asset class to definie the shape of that biome. Now there is so "Official Way" to make terrain especially with voxels BUT... IF THERE WERE, it would be how the infamouse game `Minecraft` generates terrain. We have been doing a lot of studying on this topic and decided to not entirely destroy our voxel system but revamp it to work a lot more like Minecraft's Voxel System. Here are the details and changes on that!
 
 1. Depreciating Our Current Biome System.
    it took awhile but depreciating our biome system was NEEDED. This is because it violates Minecrafts Terrain generation steps. What are those steps? Take a look:
@@ -42,7 +42,7 @@ Sources:
 - Studio Notes
 - https://www.youtube.com/watch?v=ob3VwY4JyzE&t=1416s
 - https://www.youtube.com/watch?v=CSa5O6knuwI&t=848s
-- https://minecraft.wiki/w/World_generation -->
+- https://minecraft.wiki/w/World_generation
 
 ## [0.0.1] – Dev Blog Creation! <span class="tag">07/27/2025</span>
 
