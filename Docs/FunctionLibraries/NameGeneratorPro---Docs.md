@@ -74,7 +74,7 @@ Follow these steps to get up and running quickly:
 
 Here we loop through an array of Text Render components and set the texts according to our randomly generated names!
 
-<!-- Note to self, find a way to have images get enlarged POST BUILD AND DEPLOY -->
+<!-- Note to self, find a way to have images get enlarged POST BUILD AND DEPLOY FIX Images opening in other tabs.  -->
 
 ![Blueprint example of NameGenPro](https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/BlueprintNameGenProExample.png)
 

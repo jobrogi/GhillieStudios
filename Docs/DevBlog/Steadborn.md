@@ -2,7 +2,7 @@
 
 #### What's This About?
 
-This Dev Blog Servs as a weekly progress update on whats going on with our Voxel Game. We are a small studio so updates can often be super small and sometimes even feel like they are going backwards at times. This Dev Blog solves this problem by showing the weekly progress and ever changing goals we are acomplishing with our passion project Steadborn!
+This Dev Blog Servs as a progress update on whats going on with our Voxel Game. We are a small studio so updates can often be super small and sometimes even feel like they are going backwards at times. This Dev Blog solves this problem by showing the weekly progress and ever changing goals we are acomplishing with our passion project Steadborn!
 
 #### What to expect?
 

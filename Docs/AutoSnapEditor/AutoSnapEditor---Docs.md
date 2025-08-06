@@ -1,6 +1,6 @@
-# AutoSnap – Editor Plugin
+# AutoSnapEditor Plugin
 
-AutoSnap – Editor is a lightweight Unreal Engine 5 plugin that enhances your level design workflow with hotkey-based snapping controls. It allows precise modular asset placement while dragging actors in the editor — without touching Unreal’s built-in grid snapping.
+AutoSnapEditor is a lightweight Unreal Engine 5 plugin that enhances your level design workflow with hotkey-based snapping controls. It allows precise modular asset placement while dragging actors in the editor without touching Unreal’s built-in grid snapping.
 
 <div style="margin-top: 2rem;"></div>
 
@@ -15,7 +15,7 @@ Follow these steps to get up and running quickly:
 
 2. **Initial Setup**
 
-   - Navigate to `Editor Preferences > AutoSnap – Editor`.
+   - Navigate to `Editor Preferences > AutoSnapEditor`.
    - Configure any global settings such as snap size, axis toggles, or debug feedback.
 
 3. **Using the Plugin**
@@ -53,13 +53,13 @@ Follow these steps to get up and running quickly:
 
 ## Settings Overview
 
-| Setting Name          | Location                               | Description                               |
-| --------------------- | -------------------------------------- | ----------------------------------------- |
-| `bEnableSnapping`     | Editor Preferences > AutoSnap – Editor | Toggle plugin snapping globally           |
-| `SnapStepSize`        | Editor Preferences > AutoSnap – Editor | Controls snap increment distance          |
-| `bShowGridOverlay`    | Editor Preferences > AutoSnap – Editor | Shows/hides visual snap grid              |
-| `bEnableDebugLogging` | Editor Preferences > AutoSnap – Editor | Outputs snap-related logs to the console  |
-| `bSnapAxisX/Y/Z`      | Runtime (Hotkey toggle)                | Enables/disables snapping along each axis |
+| Setting Name          | Location                            | Description                               |
+| --------------------- | ----------------------------------- | ----------------------------------------- |
+| `bEnableSnapping`     | Editor Preferences > AutoSnapEditor | Toggle plugin snapping globally           |
+| `SnapStepSize`        | Editor Preferences > AutoSnapEditor | Controls snap increment distance          |
+| `bShowGridOverlay`    | Editor Preferences > AutoSnapEditor | Shows/hides visual snap grid              |
+| `bEnableDebugLogging` | Editor Preferences > AutoSnapEditor | Outputs snap-related logs to the console  |
+| `bSnapAxisX/Y/Z`      | Runtime (Hotkey toggle)             | Enables/disables snapping along each axis |
 
 <div style="margin-top: 2rem;"></div>
 

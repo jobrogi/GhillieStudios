@@ -1,12 +1,28 @@
-# AutoSnap – Editor Plugin – Changelog
+# AutoSnapEditor Plugin – Changelog
 
-This document outlines all major changes and additions to the AutoSnap – Editor plugin.
+This document outlines all major changes and additions to the AutoSnapEditor plugin.
+
+<div style="margin-top: 2rem;"></div>
+
+## [1.0.2] – Bug Fixes + Plugin Standardizations
+
+#### Updates
+
+- Updated to a more detailed version of the docs.
+- Fixed bug where if you try to change the editor mode manually the settings will update accordingly.
+- Changed Plugin name from AutoSnap - Editor to AutoSnapEditor.
+- Changed all `AutoSnap` References to `AutoSnapEditor` with the exception of hidden classes.
+- Updated listing fab page.
+- Depreciated overview page.
+- Added Icon to Edit Mode AutoSnapEditor.
+- Added Plugin Icon.
+- Fixed bug where you keep getting the `SnapDistanceSlider is null` log unless the settings menu is open.
 
 <div style="margin-top: 2rem;"></div>
 
 ## [1.0.1] – Documentation Standardization
 
-### Updates
+#### Updates
 
 - Updated docs to a standardized template
 
@@ -14,7 +30,7 @@ This document outlines all major changes and additions to the AutoSnap – Edito
 
 ## [1.0.0] – Initial Release
 
-### Features
+#### Features
 
 - Editor-only snapping plugin designed for level designers and modular asset placement
 - Toggle snapping for individual axes (X, Y, Z) with hotkeys
@@ -25,7 +41,7 @@ This document outlines all major changes and additions to the AutoSnap – Edito
 - Works independently of Unreal Engine’s native grid snapping system
 - No external dependencies
 
-### Included Components
+#### Included Components
 
 - `AutoSnapEditorModule` – Core module that manages plugin startup, menu integration, and global toggles
 - `UAutoSnapEditorSettings` – Project-wide configuration accessible via Project Settings
