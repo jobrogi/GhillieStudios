@@ -141,4 +141,3 @@ Follow these steps to get up and running quickly:
 <blockquote>
   Built by Ghillie Studios. All plugins support Unreal Engine 5.3–5.5 unless otherwise noted.
 </blockquote>
-```
