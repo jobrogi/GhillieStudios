@@ -7,7 +7,7 @@ AutoSnap – Runtime brings powerful, grid-based snapping and transform controls
 
 <div style="margin-top: 2rem;"></div>
 
-## Getting Started
+#### Getting Started
 
 Follow these steps to get up and running quickly:
 
@@ -19,6 +19,21 @@ Follow these steps to get up and running quickly:
 
 - Enable the plugin under **Edit > Plugins > AutoSnap – Runtime**, then restart the editor.
 - Add the `AutoSnapControllerComponent` to your player character or controller Blueprint.
+
+#### Getting to plugin content
+
+Recently we just added an easier way to access our content. These are the steps to getting to our content after this new update!
+Step 1: After installing AutoSnapRuntime go to the main editor then at the toolbar at the top go to `Window -> Open AutoSnapRuntime Contents`
+<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/UE5Editor_Window.png" 
+       alt="AutoSnapRuntime Navigation" 
+       width="600" 
+       style="margin-top: 1rem;" />
+
+Step 2: Pressing that button will open the content drawer where the AutoSnapRuntime Plugin content lies!
+<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/UE5Editor_Content.png" 
+       alt="Unreal Engine Content Drawer" 
+       width="600" 
+       style="margin-top: 1rem;" />
 
 #### Using the Plugin
 
@@ -48,45 +63,64 @@ To limit snapping to specific actors, enable **“Require Actor Tag”** in the 
 
 <div style="margin-top: 2rem;"></div>
 
-## Features Overview
+#### Features Overview
 
-| Feature                   | Description                                                      |
-| ------------------------- | ---------------------------------------------------------------- |
-| Grid-Snapped Movement     | Move actors in world space using snap intervals                  |
-| Runtime Gizmo             | Drag actors with X/Y/Z arrows and XY/XZ/YZ plane handles         |
-| Dynamic Grid              | Grid follows the currently selected actor                        |
-| Adjustable Snap Size      | Customize grid unit size in the Details panel                    |
-| Tag-Based Selection       | Limit interaction to tagged actors                               |
-| Blueprint Friendly        | Works entirely via Blueprint, no C++ knowledge required          |
-| Hover Highlighting        | Optional visual feedback when mouse hovers over gizmo elements   |
-| Input Mapping Integration | Uses Enhanced Input actions with default bindings included       |
-| Defaults Fallback         | Plugin auto-assigns defaults at runtime if nothing is configured |
-
-<div style="margin-top: 2rem;"></div>
-
-## Included Files
-
-| File/Folder Path                       | Description                                 |
-| -------------------------------------- | ------------------------------------------- |
-| `/Plugins/AutoSnapRuntime/Blueprints/` | `BP_Gizmo`, `BP_GridVisualizer`             |
-| `/Plugins/AutoSnapRuntime/Components/` | `AutoSnapControllerComponent` for logic     |
-| `/Plugins/AutoSnapRuntime/Input/`      | `IMC_AutoSnap`, `IA_LeftClick`, drag inputs |
+| Feature                   | Description                                                                  |
+| ------------------------- | ---------------------------------------------------------------------------- |
+| Grid-Snapped Movement     | Move actors in world space using snap intervals                              |
+| Runtime Gizmo             | Drag actors with X/Y/Z arrows and XY/XZ/YZ plane handles                     |
+| Gizmo Rotation Logic      | Gizmo automatically aligns to the camera or actor rotation based on settings |
+| Dynamic Grid              | Grid follows the currently selected actor                                    |
+| Adjustable Snap Size      | Customize grid unit size in the Details panel                                |
+| Tag-Based Selection       | Limit interaction to tagged actors                                           |
+| Blueprint Friendly        | Works entirely via Blueprint, no C++ knowledge required                      |
+| Hover Highlighting        | Optional visual feedback when mouse hovers over gizmo elements               |
+| Input Mapping Integration | Uses Enhanced Input actions with default bindings included                   |
+| Built-In Camera Character | Includes a ready-to-use camera character Blueprint for testing               |
+| Example Showcase Level    | Example map included to demonstrate full system functionality                |
+| Defaults Fallback         | Plugin auto-assigns defaults at runtime if nothing is configured             |
 
 <div style="margin-top: 2rem;"></div>
 
-## Settings Overview
+#### Included Files
 
-| Setting Name              | Location                              | Description                                             |
-| ------------------------- | ------------------------------------- | ------------------------------------------------------- |
-| `GizmoClass`              | AutoSnapControllerComponent (Details) | Actor gizmo used for dragging                           |
-| `GridVisualizerClass`     | AutoSnapControllerComponent (Details) | Actor grid used for snapping feedback                   |
-| `InputMappingContext`     | AutoSnapControllerComponent (Details) | Input bindings for interaction                          |
-| `bUseActorTagRequirement` | AutoSnapControllerComponent (Details) | Restrict snap logic to actors with a specific tag       |
-| `RequiredActorTag`        | AutoSnapControllerComponent (Details) | Tag used for selectable actors (e.g., `SnapSelectable`) |
+| File/Folder Path                                                  | Description                                            |
+| ----------------------------------------------------------------- | ------------------------------------------------------ |
+| `[ProjectRoot]/Engine/Plugins/AutoSnapRuntime/Content/BPs/`       | Blueprint classes like `BP_Gizmo`, `BP_GridVisualizer` |
+| `[ProjectRoot]/Engine/Plugins/AutoSnapRuntime/Content/Input/`     | Input assets such as `IMC_AutoSnap`, `IA_LeftClick`    |
+| `[ProjectRoot]/Engine/Plugins/AutoSnapRuntime/Content/Maps/`      | Demo or debug maps related to runtime snapping         |
+| `[ProjectRoot]/Engine/Plugins/AutoSnapRuntime/Content/Materials/` | Materials used by gizmos or visual helpers             |
+| `[ProjectRoot]/Engine/Plugins/AutoSnapRuntime/Content/SM/`        | Static meshes for gizmos or grid visuals               |
+| `[ProjectRoot]/Engine/Plugins/AutoSnapRuntime/Components/`        | C++ class `AutoSnapControllerComponent` and core logic |
 
 <div style="margin-top: 2rem;"></div>
 
-## Engine Compatibility
+#### Settings Overview
+
+| Setting Name              | Location                              | Description                                                       |
+| ------------------------- | ------------------------------------- | ----------------------------------------------------------------- |
+| `bEnableRuntimeSnap`      | AutoSnapControllerComponent (Details) | Enables snapping behavior during runtime.                         |
+| `bGizmoAlignWithCamera`   | AutoSnapControllerComponent (Details) | Determines whether the gizmo aligns with the camera rotation.     |
+| `GizmoSnapTolerance`      | AutoSnapControllerComponent (Details) | Distance tolerance when snapping to grid or surfaces.             |
+| `bSnapOnSelect`           | AutoSnapControllerComponent (Details) | Automatically snaps the actor to the grid when selected.          |
+| `TraceDistance`           | AutoSnapControllerComponent (Details) | Distance for the mouse trace used to detect snap targets.         |
+| `bDebugMouseTrace`        | AutoSnapControllerComponent (Details) | Enables debug visualization for the mouse trace.                  |
+| `HoveredActor`            | AutoSnapControllerComponent (Details) | The actor currently hovered by the trace. Read-only.              |
+| `GridSize`                | AutoSnapControllerComponent (Details) | World space grid size used for snapping.                          |
+| `RuntimeGizmoClass`       | AutoSnapControllerComponent (Details) | Gizmo actor class used to represent selected object manipulation. |
+| `GizmoOffset`             | AutoSnapControllerComponent (Details) | Positional offset applied to the runtime gizmo.                   |
+| `GizmoScale`              | AutoSnapControllerComponent (Details) | Uniform scale applied to the runtime gizmo actor.                 |
+| `GridVisualizerClass`     | AutoSnapControllerComponent (Details) | Visual class used to represent the snapping grid at runtime.      |
+| `Default Grid Plane `     | AutoSnapControllerComponent (Details) | Sets a default fallback plane + initial grid plane                |
+| `AxisColors`              | AutoSnapControllerComponent (Details) | Optional color overrides for visualizing each axis.               |
+| `InputMapping`            | AutoSnapControllerComponent (Details) | Mapping context defining the input schema for snapping logic.     |
+| `SelectAction`            | AutoSnapControllerComponent (Details) | Input action used to trigger selection or interaction.            |
+| `bUseActorTagRequirement` | AutoSnapControllerComponent (Details) | Restricts selection to actors that have a specific tag.           |
+| `RequiredActorTags`       | AutoSnapControllerComponent (Details) | Array of actor tags required for an actor to be selectable.       |
+
+<div style="margin-top: 2rem;"></div>
+
+#### Engine Compatibility
 
 | Unreal Engine Version | Supported |
 | --------------------- | --------- |
@@ -97,13 +131,14 @@ To limit snapping to specific actors, enable **“Require Actor Tag”** in the 
 
 <div style="margin-top: 2rem;"></div>
 
-## Notes
+#### Notes
 
+- Actors must have their **Mobility** set to **Moveable** in the Details panel to support runtime snapping.
 - Hover feedback requires an optional trace channel named `Gizmo` (see below).
 - Default Blueprint classes are auto-assigned if you leave them empty.
 - All inputs are Enhanced Input–based. You can override them with your own actions or contexts.
 
-### Optional Trace Channel for Hover FX
+#### Optional Trace Channel for Hover FX
 
 To enable hover color feedback on gizmo parts:
 

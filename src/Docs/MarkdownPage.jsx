@@ -38,7 +38,7 @@ const MarkdownPage = ({ slug: overrideSlug }) => {
     <div className="relative min-h-screen w-full">
       {/* Full Height Solid Wrapper */}
       <div className="relative z-10 w-full min-h-screen flex justify-center">
-        <div className="w-full  bg-[#0f0f0f] bg-opacity-100 rounded-none sm:rounded-xl shadow-lg px-6 py-16 -my-12">
+        <div className="w-full bg-[#0f0f0f] bg-opacity-100 rounded-none sm:rounded-xl shadow-lg px-6 py-16 -my-12">
           <article className="prose prose-invert max-w-none text-left">
             <ReactMarkdown
               children={content}
@@ -74,6 +74,45 @@ const MarkdownPage = ({ slug: overrideSlug }) => {
                     <a href={href} target="_blank" rel="noopener noreferrer">
                       {props.children}
                     </a>
+                  );
+                },
+
+                img: ({ src, alt }) => {
+                  const [isOpen, setIsOpen] = useState(false);
+
+                  return (
+                    <>
+                      <div className="my-4 text-center">
+                        <img
+                          src={src}
+                          alt={alt}
+                          onClick={() => setIsOpen(true)}
+                          className="cursor-zoom-in rounded border border-gray-300 mx-auto"
+                          width={600}
+                        />
+                        <p className="text-sm text-gray-400 mt-2">
+                          Click to enlarge
+                        </p>
+                      </div>
+
+                      {isOpen && (
+                        <div
+                          className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center p-8"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          <div className="relative">
+                            <img
+                              src={src}
+                              alt={alt}
+                              className="max-w-[90vw] max-h-[80vh] rounded shadow-xl cursor-zoom-out"
+                            />
+                            <p className="absolute top-2 left-1/2 -translate-x-1/2 text-white text-sm opacity-80">
+                              Click anywhere to close
+                            </p>
+                          </div>
+                        </div>
+                      )}
+                    </>
                   );
                 },
               }}

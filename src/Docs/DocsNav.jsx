@@ -49,7 +49,10 @@ const DocsNav = () => {
                     {section.links.map((link) => {
                       const isWorking = activePaths.includes(link.path);
                       return (
-                        <li key={link.title}>
+                        <li
+                          key={link.title}
+                          className="flex items-center justify-between whitespace-nowrap"
+                        >
                           {isWorking ? (
                             <NavLink
                               to={link.path}
@@ -69,6 +72,12 @@ const DocsNav = () => {
                               {link.title}
                             </span>
                           )}
+
+                          {link.tag && (
+                            <span className="ml-2 p-1 py-0.5 bg-orange-300 text-black text-[10px] font-semibold rounded">
+                              {link.tag}
+                            </span>
+                          )}
                         </li>
                       );
                     })}
@@ -78,32 +87,51 @@ const DocsNav = () => {
                 {"plugins" in section &&
                   section.plugins.map((plugin) => (
                     <div key={plugin.name} className="mt-3">
-                      <p className="text-xs font-semibold text-gray-300 pl-2 mb-1">
-                        {plugin.name}
-                      </p>
+                      <div className="flex items-center justify-between pl-2 mb-1">
+                        <p className="text-xs font-semibold text-gray-300">
+                          {plugin.name}
+                        </p>
+                        {plugin.tag && (
+                          <span className="ml-2 p-1 py-0.5 bg-orange-300 text-black text-[10px] font-semibold rounded">
+                            {plugin.tag}
+                          </span>
+                        )}
+                      </div>
+
                       <ul className="space-y-1 pl-4">
                         {plugin.links.map((link) => {
                           const isWorking = activePaths.includes(link.path);
                           return (
-                            <li key={link.title}>
-                              {isWorking ? (
-                                <NavLink
-                                  to={link.path}
-                                  className={({ isActive }) =>
-                                    `block px-2 py-1 rounded-md text-sm transition-all ${
-                                      isActive
-                                        ? "bg-accent-300 text-black font-semibold"
-                                        : "hover:bg-[#1a1a1a] hover:text-white"
-                                    }`
-                                  }
-                                >
-                                  {link.title}
-                                </NavLink>
-                              ) : (
-                                <span className="block px-2 py-1 rounded-md text-sm text-gray-500 cursor-not-allowed">
-                                  {link.title}
-                                </span>
-                              )}
+                            <li
+                              key={link.title}
+                              className="flex items-center justify-between whitespace-nowrap"
+                            >
+                              <div className="flex items-center space-x-2">
+                                {isWorking ? (
+                                  <NavLink
+                                    to={link.path}
+                                    className={({ isActive }) =>
+                                      `px-2 py-1 rounded-md text-sm transition-all ${
+                                        isActive
+                                          ? "bg-accent-300 text-black font-semibold"
+                                          : "hover:bg-[#1a1a1a] hover:text-white"
+                                      }`
+                                    }
+                                  >
+                                    {link.title}
+                                  </NavLink>
+                                ) : (
+                                  <span className="px-2 py-1 rounded-md text-sm text-gray-500 cursor-not-allowed">
+                                    {link.title}
+                                  </span>
+                                )}
+
+                                {link.tag && (
+                                  <span className="p-1 py-0.5 bg-orange-300 text-black text-[10px] font-semibold rounded">
+                                    {link.tag}
+                                  </span>
+                                )}
+                              </div>
                             </li>
                           );
                         })}

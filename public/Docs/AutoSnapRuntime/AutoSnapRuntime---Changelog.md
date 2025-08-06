@@ -1,14 +1,31 @@
-# AutoSnap – Runtime Changelog
+# AutoSnapRuntime Changelog
 
-Track all major updates and improvements to the AutoSnap – Runtime plugin.
+Track all major updates and improvements to the AutoSnapRuntime plugin.
 
+<div style="margin-top: 2rem;"></div>
+
+## [1.0.4] – QoL + Bug Fixes
+
+#### Updates
+
+- Added a editor navigation button that will automatically navigate to the AutoSnapRuntime Plugin folder. (No more searching around for it!) Please see docs for more info!
+- Added a Editor module to the plugin. This was needed for the editor navigation button.
+- Adjusted .uplugin values.
+- Adjusted Gizmo + Made Gizmo Materials Two sided (So you can see the Gizmo Planes from behind)
+- Added New Setting `Default Grid Plane` Which allows you to select a default fallback grid plane.
+- Fixed Setting `Debug Mouse Trace` (type bool). Will now show persistent Line traces on clicks. It will also Log useful information about the trace in the console log.
+- Fixed a bug that allows you to select another selectable object while trying to select a gizmo actor handle.
+- Fixed a bug that wont let you select gizmo components if they are within a dragable actor object.
+  - Added a two Trace System to solve this problem. Also Updated traces to use Multi Sphere tracing rather than a single line trace. One Trace searches for Gizmo and the other searches for the actors.
+- Added zooming to the camera controller.
+- Depreciated `Flip Flop` Blueprint Events in `ARuntimeGizmoActor` class.
+- Updated `L_ExampleLevel` Map
 <div style="margin-top: 2rem;"></div>
 
 ## [1.0.3] – QoL + Added Settings & Bonus Features
 
 #### Updates
 
-- Adjusted Plugin files to show in Root Folder. Plugin Files are now in [ProjectFolder] -> Plugins -> Ghillie Studios -> AutoSnap Runtime
 - Added New Setting `Enable Gizmo Align with Camera` Which will rotate the Gizmo at 90 Degree Steps based off the Camera's Rotation.
 - Added New Settings `Snap Actor on Select` Which will snap the actor to the closest grid point on select. This gets rid of the Axis Colored Dashed Lines Bug (If bool is selected)
 - Fixed Input Mapping Context Bug that flip flops the Horizontal and Vertical Movement inputs.

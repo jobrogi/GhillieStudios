@@ -85,19 +85,19 @@ const Home = () => (
         </a>
 
         {/* Explore Games (Disabled) */}
-        <div className="relative group">
-          <button
-            type="button"
-            disabled
-            aria-disabled="true"
-            className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-md font-semibold text-white bg-black/40 opacity-50 cursor-not-allowed transition-all duration-200 shadow-inner pointer-events-none text-sm sm:text-base"
-          >
-            Explore Our Games
-          </button>
-          <div className="absolute left-1/2 top-full mt-2 w-56 sm:w-64 max-w-xs -translate-x-1/2 scale-95 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 z-50 bg-bg-100 text-xs sm:text-sm text-text-secondary p-3 rounded-md shadow-lg border border-border">
-            I swear we are working on it!
-          </div>
-        </div>
+        {/* Explore Our Games (Scrolls to #games) */}
+        <button
+          type="button"
+          onClick={() => {
+            const target = document.getElementById("games");
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+          className="hover:scale-[1.02] hover:cursor-pointer active:scale-[0.98] px-5 py-2.5 sm:px-6 sm:py-3 rounded-md font-semibold text-white bg-black/40 hover:bg-red-500 focus:outline-none transition-all duration-200 shadow-md hover:shadow-lg text-sm sm:text-base"
+        >
+          Explore Our Games
+        </button>
       </div>
     </div>
   </section>

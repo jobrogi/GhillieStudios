@@ -32,7 +32,7 @@ const plugins = [
   },
 ];
 
-const Work = () => (
+const Tools = () => (
   <section
     id="work"
     className="w-full text-text-primary py-28 px-6 scroll-mt-24"
@@ -69,14 +69,14 @@ const Work = () => (
       </div>
     </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto ">
       {plugins.map((plugin, index) => (
         <a
           key={index}
           href={plugin.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#1d1f25] rounded-xl border border-[#2a2d35] hover:border-accent transition-all duration-300 shadow-md hover:shadow-xl overflow-hidden flex flex-col"
+          className="bg-[#1d1f25] rounded-xl border  hover:border-gray-400 hover:scale-105 border-[#2a2d35] hover:border-accent transition-all duration-300 shadow-md hover:shadow-xl overflow-hidden flex flex-col"
         >
           {/* Image */}
           <div className="w-full h-40 bg-[#121316] flex items-center justify-center border-b border-[#2a2d35]">
@@ -109,4 +109,4 @@ const Work = () => (
   </section>
 );
 
-export default Work;
+export default Tools;

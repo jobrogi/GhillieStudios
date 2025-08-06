@@ -2,10 +2,11 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import Home from "./MainSite/Home";
 import About from "./MainSite/About";
-import Work from "./MainSite/Work";
+import Tools from "./MainSite/Tools";
 import Contact from "./MainSite/Contact";
 import Documentation from "./Docs/Docs";
 import MarkdownPage from "./Docs/MarkdownPage";
+import Games from "./MainSite/Games";
 const App = () => {
   const location = useLocation();
   const isDocs = location.pathname.startsWith("/docs");
@@ -32,8 +33,12 @@ const App = () => {
               <section id="about">
                 <About />
               </section>
-              <section id="work">
-                <Work />
+              <section id="games">
+                <Games />
+              </section>
+
+              <section id="tools">
+                <Tools />
               </section>
               <section id="contact">
                 <Contact />

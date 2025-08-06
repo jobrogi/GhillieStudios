@@ -1,6 +1,6 @@
-# AutoSnap – Editor Plugin
+# AutoSnapEditor Plugin
 
-AutoSnap – Editor is a lightweight Unreal Engine 5 plugin that enhances your level design workflow with hotkey-based snapping controls. It allows precise modular asset placement while dragging actors in the editor — without touching Unreal’s built-in grid snapping.
+AutoSnapEditor is a lightweight Unreal Engine 5 plugin that enhances your level design workflow with hotkey-based snapping controls. It allows precise modular asset placement while dragging actors in the editor without touching Unreal’s built-in grid snapping. This plugin is meant to make it easier for you to snap objects via hotkey controls. It is a pure editor plugin and is meant to
 
 <div style="margin-top: 2rem;"></div>
 
@@ -15,7 +15,7 @@ Follow these steps to get up and running quickly:
 
 2. **Initial Setup**
 
-   - Navigate to `Editor Preferences > AutoSnap – Editor`.
+   - Navigate to `Editor Preferences > AutoSnapEditor`.
    - Configure any global settings such as snap size, axis toggles, or debug feedback.
 
 3. **Using the Plugin**
@@ -23,7 +23,27 @@ Follow these steps to get up and running quickly:
    - Use `Shift + G` to toggle snapping.
    - Modify snap distance with `Shift + Mouse Wheel`.
    - Use additional hotkeys (`Shift + X/Y/Z`) to toggle individual axes.
+   - Use `Shift + D` to toggle Debug Logging
    - Use the settings panel to adjust behavior, visuals, and logs.
+
+> Note: The only two ways to get rid of the grid is by either 1. Disabling AutoSnapEditor or 2. Toggling the `Toggle Grid` Setting within the AutoSnapEditor Settings Panel.
+
+<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/AutoSnapEditor_Note1.png" 
+        alt="UE5 Texture Compression Settings" 
+        width="600" 
+        style="margin-top: 1rem;" />
+
+> Note: If both `Toggle Grid` and `Enable AutoSnapEditor` Are both checked true then you will have the grid pop up no matter what axis is enabled and disabled.
+> For example if `Snap X` is toggled false and `Snap Y` and `Snap Z` are both toggled true then still ALL axis of the grid will show up. The only difference is that the Axis X will NOT be snappable.
+
+> Note: Hotkeys are customizable with one caveot. You cannot control the `Shift` aspect of any of the hotkeys. This means whatever you set the hotkey to, will automatically and unchangably be paried with the `Shift` Key.
+
+<div>
+  <img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/AutoSnapEditor_Note2.png"
+       alt="UE5 Texture Compression Settings"
+       width="600"
+       style="margin-top: 1rem;" />
+</div>
 
 <div style="margin-top: 2rem;"></div>
 
@@ -53,13 +73,13 @@ Follow these steps to get up and running quickly:
 
 ## Settings Overview
 
-| Setting Name          | Location                               | Description                               |
-| --------------------- | -------------------------------------- | ----------------------------------------- |
-| `bEnableSnapping`     | Editor Preferences > AutoSnap – Editor | Toggle plugin snapping globally           |
-| `SnapStepSize`        | Editor Preferences > AutoSnap – Editor | Controls snap increment distance          |
-| `bShowGridOverlay`    | Editor Preferences > AutoSnap – Editor | Shows/hides visual snap grid              |
-| `bEnableDebugLogging` | Editor Preferences > AutoSnap – Editor | Outputs snap-related logs to the console  |
-| `bSnapAxisX/Y/Z`      | Runtime (Hotkey toggle)                | Enables/disables snapping along each axis |
+| Setting Name          | Location                            | Description                               |
+| --------------------- | ----------------------------------- | ----------------------------------------- |
+| `bEnableSnapping`     | Editor Preferences > AutoSnapEditor | Toggle plugin snapping globally           |
+| `SnapStepSize`        | Editor Preferences > AutoSnapEditor | Controls snap increment distance          |
+| `bShowGridOverlay`    | Editor Preferences > AutoSnapEditor | Shows/hides visual snap grid              |
+| `bEnableDebugLogging` | Editor Preferences > AutoSnapEditor | Outputs snap-related logs to the console  |
+| `bSnapAxisX/Y/Z`      | Runtime (Hotkey toggle)             | Enables/disables snapping along each axis |
 
 <div style="margin-top: 2rem;"></div>
 

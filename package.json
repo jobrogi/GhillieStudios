@@ -2,7 +2,7 @@
   "name": "ghilliestudios",
   "homepage": "https://jobrogi.github.io/GhillieStudios",
   "private": true,
-  "version": "0.0.16",
+  "version": "0.0.44",
   "type": "module",
   "scripts": {
     "dev": "vite",

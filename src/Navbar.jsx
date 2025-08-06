@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-const sections = ["home", "about", "work", "contact"];
+const sections = ["home", "about", "games", "tools", "contact"];
 
 const Navbar = () => {
   const location = useLocation();

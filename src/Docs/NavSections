@@ -1,5 +1,15 @@
 const navSections = [
   {
+    label: "Dev Blog",
+    links: [
+      {
+        title: "Steadborn Devlog",
+        path: "/docs/md/DevBlog---Steadborn",
+        //tag: "Weekly Updates",
+      },
+    ],
+  },
+  {
     label: "Getting Started",
     links: [
       { title: "Overview", path: "/docs/md/Docs---Overview" },
@@ -11,29 +21,13 @@ const navSections = [
     label: "Plugins",
     plugins: [
       {
-        name: "RTSCamPro",
+        name: "AutoSnapRuntime",
+        tag: "Most Popular",
         links: [
-          {
-            title: "Overview",
-            path: "/docs/md/RTSCamPro---RTSCamPro---Overview",
-          },
-          {
-            title: "Changelog",
-            path: "/docs/md/RTSCamPro---RTSCamPro---Changelog",
-          },
-          {
-            title: "Documentation",
-            path: "/docs/md/RTSCamPro---RTSCamPro---Docs",
-          },
-        ],
-      },
-      {
-        name: "AutoSnap – Runtime",
-        links: [
-          {
-            title: "Overview",
-            path: "/docs/md/AutoSnapRuntime---AutoSnapRuntime---Overview",
-          },
+          // {
+          //   title: "Overview",
+          //   path: "/docs/md/AutoSnapRuntime---AutoSnapRuntime---Overview",
+          // },
           {
             title: "Changelog",
             path: "/docs/md/AutoSnapRuntime---AutoSnapRuntime---Changelog",
@@ -45,12 +39,48 @@ const navSections = [
         ],
       },
       {
-        name: "AutoSnap – Editor",
+        name: "Texture Atlas Builder",
+        tag: "New",
         links: [
+          // {
+          //   title: "Overview",
+          //   path: "/docs/md/TextureAtlasBuilder---TextureAtlasBuilder---Overview",
+          // },
           {
-            title: "Overview",
-            path: "/docs/md/AutoSnapEditor---AutoSnapEditor---Overview",
+            title: "Changelog",
+            path: "/docs/md/TextureAtlasBuilder---TextureAtlasBuilder---Changelog",
           },
+          {
+            title: "Documentation",
+            path: "/docs/md/TextureAtlasBuilder---TextureAtlasBuilder---Docs",
+          },
+        ],
+      },
+      {
+        name: "RTSCamPro",
+        links: [
+          // {
+          //   title: "Overview",
+          //   path: "/docs/md/RTSCamPro---RTSCamPro---Overview",
+          // },
+          {
+            title: "Changelog",
+            path: "/docs/md/RTSCamPro---RTSCamPro---Changelog",
+          },
+          {
+            title: "Documentation",
+            path: "/docs/md/RTSCamPro---RTSCamPro---Docs",
+          },
+        ],
+      },
+
+      {
+        name: "AutoSnapEditor",
+        links: [
+          // {
+          //   title: "Overview",
+          //   path: "/docs/md/AutoSnapEditor---AutoSnapEditor---Overview",
+          // },
           {
             title: "Changelog",
             path: "/docs/md/AutoSnapEditor---AutoSnapEditor---Changelog",
@@ -61,14 +91,13 @@ const navSections = [
           },
         ],
       },
-
       {
         name: "GlideCam - Lite RTS Camera System",
         links: [
-          {
-            title: "Overview",
-            path: "/docs/md/GlideCam---GlideCam---Overview",
-          },
+          // {
+          //   title: "Overview",
+          //   path: "/docs/md/GlideCam---GlideCam---Overview",
+          // },
           {
             title: "Changelog",
             path: "/docs/md/GlideCam---GlideCam---Changelog",
@@ -79,14 +108,13 @@ const navSections = [
           },
         ],
       },
-
       {
         name: "Modular Interactions",
         links: [
-          {
-            title: "Overview",
-            path: "/docs/md/ModularInteractions---ModularInteractions---Overview",
-          },
+          // {
+          //   title: "Overview",
+          //   path: "/docs/md/ModularInteractions---ModularInteractions---Overview",
+          // },
           {
             title: "Changelog",
             path: "/docs/md/ModularInteractions---ModularInteractions---Changelog",
@@ -117,6 +145,26 @@ const navSections = [
           {
             title: "Documentation",
             path: "/docs/md/FunctionLibraries---TraceFunctionLibrary---Docs",
+          },
+        ],
+      },
+      {
+        name: "FastNoiseLite Function Library",
+        tag: "New",
+        links: [
+          {
+            title: "Documentation",
+            path: "/docs/md/FunctionLibraries---FastNoiseLiteFunctionLibrary---Docs",
+          },
+        ],
+      },
+      {
+        name: "Name Generator Pro",
+        tag: "New",
+        links: [
+          {
+            title: "Documentation",
+            path: "/docs/md/FunctionLibraries---NameGeneratorPro---Docs",
           },
         ],
       },
