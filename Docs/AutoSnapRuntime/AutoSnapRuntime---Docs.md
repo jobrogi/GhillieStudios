@@ -24,10 +24,16 @@ Follow these steps to get up and running quickly:
 
 Recently we just added an easier way to access our content. These are the steps to getting to our content after this new update!
 Step 1: After installing AutoSnapRuntime go to the main editor then at the toolbar at the top go to `Window -> Open AutoSnapRuntime Contents`
-<a href="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/UE5Editor_Window.png" target="_blank"> <img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/UE5Editor_Window.png" alt="Unreal Engine Window View" width="600" style="margin-top: 1rem; border: 1px solid #ccc; border-radius: 4px;" /> </a> <div style="margin-top: 1rem;"></div>
+<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/UE5Editor_Window.png" 
+       alt="AutoSnapRuntime Navigation" 
+       width="600" 
+       style="margin-top: 1rem;" />
 
 Step 2: Pressing that button will open the content drawer where the AutoSnapRuntime Plugin content lies!
-<a href="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/UE5Editor_Content.png" target="_blank"> <img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/UE5Editor_Content.png" alt="Unreal Engine Content Drawer" width="600" style="margin-top: 1rem; border: 1px solid #ccc; border-radius: 4px;" /> </a>
+<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/UE5Editor_Content.png" 
+       alt="Unreal Engine Content Drawer" 
+       width="600" 
+       style="margin-top: 1rem;" />
 
 #### Using the Plugin
 

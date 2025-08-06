@@ -1,6 +1,6 @@
 # AutoSnapEditor Plugin
 
-AutoSnapEditor is a lightweight Unreal Engine 5 plugin that enhances your level design workflow with hotkey-based snapping controls. It allows precise modular asset placement while dragging actors in the editor without touching Unreal’s built-in grid snapping.
+AutoSnapEditor is a lightweight Unreal Engine 5 plugin that enhances your level design workflow with hotkey-based snapping controls. It allows precise modular asset placement while dragging actors in the editor without touching Unreal’s built-in grid snapping. This plugin is meant to make it easier for you to snap objects via hotkey controls. It is a pure editor plugin and is meant to
 
 <div style="margin-top: 2rem;"></div>
 
@@ -23,7 +23,15 @@ Follow these steps to get up and running quickly:
    - Use `Shift + G` to toggle snapping.
    - Modify snap distance with `Shift + Mouse Wheel`.
    - Use additional hotkeys (`Shift + X/Y/Z`) to toggle individual axes.
+   - Use `Shift + D` to toggle Debug Logging
    - Use the settings panel to adjust behavior, visuals, and logs.
+
+> Note: The only two ways to get rid of the grid is by either 1. Disabling AutoSnapEditor or 2. Toggling the `Toggle Grid` Setting within the AutoSnapEditor Settings Panel.
+> <img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/AutoSnapEditor_Note1.png"
+
+       alt="UE5 Texture Compression Settings"
+       width="600"
+       style="margin-top: 1rem;" />
 
 <div style="margin-top: 2rem;"></div>
 

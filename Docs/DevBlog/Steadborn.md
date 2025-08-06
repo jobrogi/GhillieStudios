@@ -8,6 +8,8 @@ This Dev Blog Servs as a progress update on whats going on with our Voxel Game. 
 
 We plan on showcasing even the technical side of our project. We are currently heavy in development within voxel world building. This is no easy task. It also will make up 100 percent of the world in Steadborn. So to show we are working on the game we will update this blog weekly with technical information + gameplay design choices and the reason behind them!
 
+###
+
 <div style="margin-top: 2rem;"s></div>
 
 [0.0.2] – Voxel Terrain Refactoring! <span class="tag">08/03/2025</span>
