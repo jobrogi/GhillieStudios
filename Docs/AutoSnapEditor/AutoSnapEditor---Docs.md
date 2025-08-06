@@ -33,6 +33,16 @@ Follow these steps to get up and running quickly:
        width="600"
        style="margin-top: 1rem;" />
 
+> Note: If both `Toggle Grid` and `Enable AutoSnapEditor` Are both checked true then you will have the grid pop up no matter what axis is enabled and disabled.
+> For example if `Snap X` is toggled false and `Snap Y` and `Snap Z` are both toggled true then still ALL axis of the grid will show up. The only difference is that the Axis X will NOT be snappable.
+
+> Note: Hotkeys are customizable with one caveot. You cannot control the `Shift` aspect of any of the hotkeys. This means whatever you set the hotkey to, will automatically and unchangably be paried with the `Shift` Key.
+> <img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/AutoSnapEditor_Note2.png"
+
+       alt="UE5 Texture Compression Settings"
+       width="600"
+       style="margin-top: 1rem;" />
+
 <div style="margin-top: 2rem;"></div>
 
 ## Features Overview
