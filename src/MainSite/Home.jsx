@@ -100,6 +100,7 @@ const Home = () => (
         </button>
       </div>
     </div>
+    <img src="/wavesOpacity.svg" alt="Waves" />
   </section>
 );
 

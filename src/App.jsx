@@ -7,6 +7,8 @@ import Contact from "./MainSite/Contact";
 import Documentation from "./Docs/Docs";
 import MarkdownPage from "./Docs/MarkdownPage";
 import Games from "./MainSite/Games";
+
+// SVGs
 const App = () => {
   const location = useLocation();
   const isDocs = location.pathname.startsWith("/docs");
@@ -30,6 +32,7 @@ const App = () => {
               <section id="home">
                 <Home />
               </section>
+
               <section id="about">
                 <About />
               </section>
