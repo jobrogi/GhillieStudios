@@ -18,7 +18,7 @@ Follow these steps to get up and running quickly:
 #### Initial Setup
 
 - Enable the plugin under **Edit > Plugins > AutoSnap – Runtime**, then restart the editor.
-- Add the `AutoSnapControllerComponent` to your player character or controller Blueprint.
+- Add the `AutoSnapControllerComponent` to your `Player Character Blueprint`.
 
 #### Getting to plugin content
 

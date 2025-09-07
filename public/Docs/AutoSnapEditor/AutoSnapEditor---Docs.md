@@ -28,10 +28,7 @@ Follow these steps to get up and running quickly:
 
 > Note: The only two ways to get rid of the grid is by either 1. Disabling AutoSnapEditor or 2. Toggling the `Toggle Grid` Setting within the AutoSnapEditor Settings Panel.
 
-<img src="https://jobrogi.github.io/GhillieStudios/Docs/DocsImages/AutoSnapEditor_Note1.png" 
-        alt="UE5 Texture Compression Settings" 
-        width="600" 
-        style="margin-top: 1rem;" />
+![Grid Note](/GhillieStudios/Docs/DocsImages/AutoSnapEditor_Note1.png)
 
 > Note: If both `Toggle Grid` and `Enable AutoSnapEditor` Are both checked true then you will have the grid pop up no matter what axis is enabled and disabled.
 > For example if `Snap X` is toggled false and `Snap Y` and `Snap Z` are both toggled true then still ALL axis of the grid will show up. The only difference is that the Axis X will NOT be snappable.
