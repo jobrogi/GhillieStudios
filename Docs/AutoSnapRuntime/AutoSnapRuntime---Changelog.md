@@ -4,7 +4,27 @@ Track all major updates and improvements to the AutoSnapRuntime plugin.
 
 <div style="margin-top: 2rem;"></div>
 
-## [1.0.4] – QoL + Bug Fixes
+<!--
+## [1.0.6] – Features + Bug Fixes
+
+#### Updates
+
+- Updated docs
+- Depreciated GetActorUnderCursor();
+- Added Multi Mode Support
+- Added Grid Mod Enum
+- Added `bHideGrid` Setting for Gizmo Mode
+- Added `Freehand` Mode
+- Refactored AutoSnapControllerComponent
+- Added `bSurfaceSnap` Setting for all modes
+- Updated AutoSnapController Details panel (organized by modes now)
+- Added AutoSnapModeSettings.h to easily define mode settings
+- Organized AutoSnapRuntime Source folder.
+ -->
+
+<div style="margin-top: 2rem;"></div>
+
+## [1.0.5] – QoL + Bug Fixes
 
 #### Updates
 
@@ -22,7 +42,7 @@ Track all major updates and improvements to the AutoSnapRuntime plugin.
 - Updated `L_ExampleLevel` Map
 <div style="margin-top: 2rem;"></div>
 
-## [1.0.3] – QoL + Added Settings & Bonus Features
+## [1.0.4] – QoL + Added Settings & Bonus Features
 
 #### Updates
 
