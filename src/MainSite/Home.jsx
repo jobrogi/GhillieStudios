@@ -101,10 +101,8 @@ const Home = () => (
         </button>
       </div>
     </div>
-    {/* Waves anchored to section */}
-    <div className="absolute -bottom-[120px] left-0 w-full z-50">
-      <Waves />
-    </div>
+    {/* Waves anchored to section WIP */}
+    {/* <div className="absolute left-0 w-full h-full z-50"><Waves /></div> */}
   </section>
 );
 
