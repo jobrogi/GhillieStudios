@@ -7,7 +7,6 @@ import Contact from "./MainSite/Contact";
 import Documentation from "./Docs/Docs";
 import MarkdownPage from "./Docs/MarkdownPage";
 import Games from "./MainSite/Games";
-
 // SVGs
 const App = () => {
   const location = useLocation();

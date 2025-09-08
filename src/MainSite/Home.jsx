@@ -1,4 +1,5 @@
 import React from "react";
+import Waves from "./Waves";
 
 const Home = () => (
   <section
@@ -100,7 +101,10 @@ const Home = () => (
         </button>
       </div>
     </div>
-    <img src="/wavesOpacity.svg" alt="Waves" />
+    {/* Waves anchored to section */}
+    <div className="absolute -bottom-[120px] left-0 w-full z-50">
+      <Waves />
+    </div>
   </section>
 );
 
